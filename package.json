@@ -2,7 +2,7 @@
   "name": "component-preview",
   "version": "0.1.0",
   "scripts": {
-    "start": "sd concurrent 'stencil build --dev --watch' 'stencil-dev-server'"
+    "start": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" "
   },
   "author": "Ionic Team",
   "license": "MIT",
