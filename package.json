@@ -1,0 +1,14 @@
+{
+  "name": "component-preview",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "sd concurrent 'stencil build --dev --watch' 'stencil-dev-server'"
+  },
+  "author": "Ionic Team",
+  "license": "MIT",
+  "dependencies": {
+    "@stencil/core": "^0.9.7",
+    "@stencil/dev-server": "0.0.18",
+    "@stencil/utils": "0.0.4"
+  }
+}
