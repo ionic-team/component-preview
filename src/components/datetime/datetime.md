@@ -1,3 +1,3 @@
 <h2>ion-datetime</h2>
 
-DateTime is used to present an interface which makes it easy for users to select dates and times. Datetime should always be used within an `ion-item`.
+DateTime is used to present an interface which makes it easy for users to select dates and times. Datetime will look like a native iOS date picker when rendered on an iOS device and will have a material look on all other platforms. Datetime should always be used within an `ion-item`.
