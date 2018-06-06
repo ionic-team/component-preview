@@ -39,6 +39,9 @@ export class ComponentPreview {
       case 'fab':
         return <div>Fab</div>;
 
+      case 'footer':
+        return <div>Footer</div>;
+
       case 'grid':
         return <div>Grid</div>;
 
