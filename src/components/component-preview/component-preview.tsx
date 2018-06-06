@@ -8,7 +8,9 @@ export class ComponentPreview {
 
   @Listen('window:message')
   handleMessage({ data }: MessageEvent) {
-    this.active = data.active;
+    if (data.active) {
+      this.active = data.active;
+    }
   }
 
   render() {
