@@ -96,6 +96,39 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface PageBadge {
+
+    }
+  }
+
+  interface HTMLPageBadgeElement extends StencilComponents.PageBadge, HTMLStencilElement {}
+
+  var HTMLPageBadgeElement: {
+    prototype: HTMLPageBadgeElement;
+    new (): HTMLPageBadgeElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-badge': HTMLPageBadgeElement;
+  }
+  interface ElementTagNameMap {
+    'page-badge': HTMLPageBadgeElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-badge': JSXElements.PageBadgeAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageBadgeAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface ComponentPreview {
 
     }

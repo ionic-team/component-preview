@@ -22,7 +22,7 @@ export class ComponentPreview {
         return <page-alert/>;
 
       case 'badge':
-        return <div>Badge</div>;
+        return <page-badge/>;
 
       case 'button':
         return <div>Button</div>;
