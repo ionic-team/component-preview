@@ -63,6 +63,39 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface PageAlert {
+
+    }
+  }
+
+  interface HTMLPageAlertElement extends StencilComponents.PageAlert, HTMLStencilElement {}
+
+  var HTMLPageAlertElement: {
+    prototype: HTMLPageAlertElement;
+    new (): HTMLPageAlertElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-alert': HTMLPageAlertElement;
+  }
+  interface ElementTagNameMap {
+    'page-alert': HTMLPageAlertElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-alert': JSXElements.PageAlertAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageAlertAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface ComponentPreview {
 
     }

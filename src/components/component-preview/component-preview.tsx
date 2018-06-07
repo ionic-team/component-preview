@@ -19,7 +19,7 @@ export class ComponentPreview {
         return <page-action-sheet/>;
 
       case 'alert':
-        return <div>Alert</div>;
+        return <page-alert/>;
 
       case 'badge':
         return <div>Badge</div>;
