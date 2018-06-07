@@ -16,7 +16,7 @@ export class ComponentPreview {
   render() {
     switch (this.active) {
       case 'action-sheet':
-        return <div>Action Sheet</div>;
+        return <page-action-sheet/>;
 
       case 'alert':
         return <div>Alert</div>;

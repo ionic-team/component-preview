@@ -30,6 +30,39 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface PageActionSheet {
+
+    }
+  }
+
+  interface HTMLPageActionSheetElement extends StencilComponents.PageActionSheet, HTMLStencilElement {}
+
+  var HTMLPageActionSheetElement: {
+    prototype: HTMLPageActionSheetElement;
+    new (): HTMLPageActionSheetElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-action-sheet': HTMLPageActionSheetElement;
+  }
+  interface ElementTagNameMap {
+    'page-action-sheet': HTMLPageActionSheetElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-action-sheet': JSXElements.PageActionSheetAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageActionSheetAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface ComponentPreview {
 
     }
