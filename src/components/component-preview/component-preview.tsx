@@ -106,7 +106,19 @@ export class ComponentPreview {
         return <div>Virtual Scroll</div>;
 
       default:
-        return <div>Default</div>;
+        return (
+          <ion-app>
+            <ion-content padding>
+              <ion-icon name="logo-ionic" color="primary" style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform : 'translate(-50%, -50%)',
+                fontSize: '6em'
+              }}/>
+            </ion-content>
+          </ion-app>
+        );
     }
   }
 }
