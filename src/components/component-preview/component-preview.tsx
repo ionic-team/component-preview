@@ -31,7 +31,7 @@ export class ComponentPreview {
         return <page-card/>;
 
       case 'checkbox':
-        return <div>Checkbox</div>;
+        return <page-checkbox/>;
 
       case 'datetime':
         return <div>DateTime</div>;

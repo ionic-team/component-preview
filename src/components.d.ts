@@ -195,6 +195,39 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface PageCheckbox {
+
+    }
+  }
+
+  interface HTMLPageCheckboxElement extends StencilComponents.PageCheckbox, HTMLStencilElement {}
+
+  var HTMLPageCheckboxElement: {
+    prototype: HTMLPageCheckboxElement;
+    new (): HTMLPageCheckboxElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-checkbox': HTMLPageCheckboxElement;
+  }
+  interface ElementTagNameMap {
+    'page-checkbox': HTMLPageCheckboxElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-checkbox': JSXElements.PageCheckboxAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageCheckboxAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface ComponentPreview {
 
     }
