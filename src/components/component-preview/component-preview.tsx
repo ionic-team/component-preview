@@ -34,19 +34,13 @@ export class ComponentPreview {
         return <page-checkbox/>;
 
       case 'datetime':
-        return <div>DateTime</div>;
+        return <page-datetime/>;
 
       case 'fab':
-        return <div>Fab</div>;
-
-      case 'footer':
-        return <div>Footer</div>;
+        return <page-fab/>;
 
       case 'grid':
-        return <div>Grid</div>;
-
-      case 'header':
-        return <div>Header</div>;
+        return <page-grid/>;
 
       case 'infinite-scroll':
         return <div>Infinite Scroll</div>;

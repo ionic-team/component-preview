@@ -257,4 +257,103 @@ declare global {
   }
 }
 
+
+declare global {
+
+  namespace StencilComponents {
+    interface PageDatetime {
+
+    }
+  }
+
+  interface HTMLPageDatetimeElement extends StencilComponents.PageDatetime, HTMLStencilElement {}
+
+  var HTMLPageDatetimeElement: {
+    prototype: HTMLPageDatetimeElement;
+    new (): HTMLPageDatetimeElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-datetime': HTMLPageDatetimeElement;
+  }
+  interface ElementTagNameMap {
+    'page-datetime': HTMLPageDatetimeElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-datetime': JSXElements.PageDatetimeAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageDatetimeAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface PageFab {
+
+    }
+  }
+
+  interface HTMLPageFabElement extends StencilComponents.PageFab, HTMLStencilElement {}
+
+  var HTMLPageFabElement: {
+    prototype: HTMLPageFabElement;
+    new (): HTMLPageFabElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-fab': HTMLPageFabElement;
+  }
+  interface ElementTagNameMap {
+    'page-fab': HTMLPageFabElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-fab': JSXElements.PageFabAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageFabAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface PageGrid {
+
+    }
+  }
+
+  interface HTMLPageGridElement extends StencilComponents.PageGrid, HTMLStencilElement {}
+
+  var HTMLPageGridElement: {
+    prototype: HTMLPageGridElement;
+    new (): HTMLPageGridElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-grid': HTMLPageGridElement;
+  }
+  interface ElementTagNameMap {
+    'page-grid': HTMLPageGridElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-grid': JSXElements.PageGridAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageGridAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
 declare global { namespace JSX { interface StencilJSX {} } }
