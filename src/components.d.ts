@@ -162,6 +162,39 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface PageCard {
+
+    }
+  }
+
+  interface HTMLPageCardElement extends StencilComponents.PageCard, HTMLStencilElement {}
+
+  var HTMLPageCardElement: {
+    prototype: HTMLPageCardElement;
+    new (): HTMLPageCardElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-card': HTMLPageCardElement;
+  }
+  interface ElementTagNameMap {
+    'page-card': HTMLPageCardElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-card': JSXElements.PageCardAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageCardAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface ComponentPreview {
 
     }

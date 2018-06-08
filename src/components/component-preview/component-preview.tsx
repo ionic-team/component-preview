@@ -28,7 +28,7 @@ export class ComponentPreview {
         return <page-button/>;
 
       case 'card':
-        return <div>Card</div>;
+        return <page-card/>;
 
       case 'checkbox':
         return <div>Checkbox</div>;
