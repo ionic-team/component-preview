@@ -25,7 +25,7 @@ export class ComponentPreview {
         return <page-badge/>;
 
       case 'button':
-        return <div>Button</div>;
+        return <page-button/>;
 
       case 'card':
         return <div>Card</div>;

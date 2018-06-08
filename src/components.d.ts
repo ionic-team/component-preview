@@ -129,6 +129,39 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface PageButton {
+
+    }
+  }
+
+  interface HTMLPageButtonElement extends StencilComponents.PageButton, HTMLStencilElement {}
+
+  var HTMLPageButtonElement: {
+    prototype: HTMLPageButtonElement;
+    new (): HTMLPageButtonElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-button': HTMLPageButtonElement;
+  }
+  interface ElementTagNameMap {
+    'page-button': HTMLPageButtonElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-button': JSXElements.PageButtonAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageButtonAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface ComponentPreview {
 
     }
