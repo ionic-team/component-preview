@@ -392,4 +392,37 @@ declare global {
   }
 }
 
+
+declare global {
+
+  namespace StencilComponents {
+    interface PageLoading {
+
+    }
+  }
+
+  interface HTMLPageLoadingElement extends StencilComponents.PageLoading, HTMLStencilElement {}
+
+  var HTMLPageLoadingElement: {
+    prototype: HTMLPageLoadingElement;
+    new (): HTMLPageLoadingElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-loading': HTMLPageLoadingElement;
+  }
+  interface ElementTagNameMap {
+    'page-loading': HTMLPageLoadingElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-loading': JSXElements.PageLoadingAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageLoadingAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
 declare global { namespace JSX { interface StencilJSX {} } }
