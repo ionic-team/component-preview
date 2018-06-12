@@ -1,3 +1,4 @@
+import '@ionic/core';
 import { Component, Listen, State } from '@stencil/core';
 
 @Component({
