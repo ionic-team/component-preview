@@ -356,4 +356,37 @@ declare global {
   }
 }
 
+
+declare global {
+
+  namespace StencilComponents {
+    interface PageList {
+
+    }
+  }
+
+  interface HTMLPageListElement extends StencilComponents.PageList, HTMLStencilElement {}
+
+  var HTMLPageListElement: {
+    prototype: HTMLPageListElement;
+    new (): HTMLPageListElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-list': HTMLPageListElement;
+  }
+  interface ElementTagNameMap {
+    'page-list': HTMLPageListElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-list': JSXElements.PageListAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageListAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
 declare global { namespace JSX { interface StencilJSX {} } }
