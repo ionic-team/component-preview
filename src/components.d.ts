@@ -363,6 +363,105 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface AppList {
+      'items': any[];
+    }
+  }
+
+  interface HTMLAppListElement extends StencilComponents.AppList, HTMLStencilElement {}
+
+  var HTMLAppListElement: {
+    prototype: HTMLAppListElement;
+    new (): HTMLAppListElement;
+  };
+  interface HTMLElementTagNameMap {
+    'app-list': HTMLAppListElement;
+  }
+  interface ElementTagNameMap {
+    'app-list': HTMLAppListElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'app-list': JSXElements.AppListAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface AppListAttributes extends HTMLAttributes {
+      'items'?: any[];
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface PageInfiniteScroll {
+
+    }
+  }
+
+  interface HTMLPageInfiniteScrollElement extends StencilComponents.PageInfiniteScroll, HTMLStencilElement {}
+
+  var HTMLPageInfiniteScrollElement: {
+    prototype: HTMLPageInfiniteScrollElement;
+    new (): HTMLPageInfiniteScrollElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-infinite-scroll': HTMLPageInfiniteScrollElement;
+  }
+  interface ElementTagNameMap {
+    'page-infinite-scroll': HTMLPageInfiniteScrollElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-infinite-scroll': JSXElements.PageInfiniteScrollAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageInfiniteScrollAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface PageInput {
+
+    }
+  }
+
+  interface HTMLPageInputElement extends StencilComponents.PageInput, HTMLStencilElement {}
+
+  var HTMLPageInputElement: {
+    prototype: HTMLPageInputElement;
+    new (): HTMLPageInputElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-input': HTMLPageInputElement;
+  }
+  interface ElementTagNameMap {
+    'page-input': HTMLPageInputElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-input': JSXElements.PageInputAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageInputAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface PageList {
 
     }
@@ -420,6 +519,435 @@ declare global {
   }
   namespace JSXElements {
     export interface PageLoadingAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface HomePage {
+
+    }
+  }
+
+  interface HTMLHomePageElement extends StencilComponents.HomePage, HTMLStencilElement {}
+
+  var HTMLHomePageElement: {
+    prototype: HTMLHomePageElement;
+    new (): HTMLHomePageElement;
+  };
+  interface HTMLElementTagNameMap {
+    'home-page': HTMLHomePageElement;
+  }
+  interface ElementTagNameMap {
+    'home-page': HTMLHomePageElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'home-page': JSXElements.HomePageAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface HomePageAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface PageMenu {
+
+    }
+  }
+
+  interface HTMLPageMenuElement extends StencilComponents.PageMenu, HTMLStencilElement {}
+
+  var HTMLPageMenuElement: {
+    prototype: HTMLPageMenuElement;
+    new (): HTMLPageMenuElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-menu': HTMLPageMenuElement;
+  }
+  interface ElementTagNameMap {
+    'page-menu': HTMLPageMenuElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-menu': JSXElements.PageMenuAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageMenuAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface ProfilePage {
+
+    }
+  }
+
+  interface HTMLProfilePageElement extends StencilComponents.ProfilePage, HTMLStencilElement {}
+
+  var HTMLProfilePageElement: {
+    prototype: HTMLProfilePageElement;
+    new (): HTMLProfilePageElement;
+  };
+  interface HTMLElementTagNameMap {
+    'profile-page': HTMLProfilePageElement;
+  }
+  interface ElementTagNameMap {
+    'profile-page': HTMLProfilePageElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'profile-page': JSXElements.ProfilePageAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ProfilePageAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface ModalPage {
+      'char': string;
+    }
+  }
+
+  interface HTMLModalPageElement extends StencilComponents.ModalPage, HTMLStencilElement {}
+
+  var HTMLModalPageElement: {
+    prototype: HTMLModalPageElement;
+    new (): HTMLModalPageElement;
+  };
+  interface HTMLElementTagNameMap {
+    'modal-page': HTMLModalPageElement;
+  }
+  interface ElementTagNameMap {
+    'modal-page': HTMLModalPageElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'modal-page': JSXElements.ModalPageAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ModalPageAttributes extends HTMLAttributes {
+      'char'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface PageModal {
+
+    }
+  }
+
+  interface HTMLPageModalElement extends StencilComponents.PageModal, HTMLStencilElement {}
+
+  var HTMLPageModalElement: {
+    prototype: HTMLPageModalElement;
+    new (): HTMLPageModalElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-modal': HTMLPageModalElement;
+  }
+  interface ElementTagNameMap {
+    'page-modal': HTMLPageModalElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-modal': JSXElements.PageModalAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageModalAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface PageRange {
+
+    }
+  }
+
+  interface HTMLPageRangeElement extends StencilComponents.PageRange, HTMLStencilElement {}
+
+  var HTMLPageRangeElement: {
+    prototype: HTMLPageRangeElement;
+    new (): HTMLPageRangeElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-range': HTMLPageRangeElement;
+  }
+  interface ElementTagNameMap {
+    'page-range': HTMLPageRangeElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-range': JSXElements.PageRangeAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageRangeAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface PageRefresher {
+
+    }
+  }
+
+  interface HTMLPageRefresherElement extends StencilComponents.PageRefresher, HTMLStencilElement {}
+
+  var HTMLPageRefresherElement: {
+    prototype: HTMLPageRefresherElement;
+    new (): HTMLPageRefresherElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-refresher': HTMLPageRefresherElement;
+  }
+  interface ElementTagNameMap {
+    'page-refresher': HTMLPageRefresherElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-refresher': JSXElements.PageRefresherAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageRefresherAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface PageSearchbar {
+
+    }
+  }
+
+  interface HTMLPageSearchbarElement extends StencilComponents.PageSearchbar, HTMLStencilElement {}
+
+  var HTMLPageSearchbarElement: {
+    prototype: HTMLPageSearchbarElement;
+    new (): HTMLPageSearchbarElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-searchbar': HTMLPageSearchbarElement;
+  }
+  interface ElementTagNameMap {
+    'page-searchbar': HTMLPageSearchbarElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-searchbar': JSXElements.PageSearchbarAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageSearchbarAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface PageSelect {
+
+    }
+  }
+
+  interface HTMLPageSelectElement extends StencilComponents.PageSelect, HTMLStencilElement {}
+
+  var HTMLPageSelectElement: {
+    prototype: HTMLPageSelectElement;
+    new (): HTMLPageSelectElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-select': HTMLPageSelectElement;
+  }
+  interface ElementTagNameMap {
+    'page-select': HTMLPageSelectElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-select': JSXElements.PageSelectAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageSelectAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface PageSlides {
+
+    }
+  }
+
+  interface HTMLPageSlidesElement extends StencilComponents.PageSlides, HTMLStencilElement {}
+
+  var HTMLPageSlidesElement: {
+    prototype: HTMLPageSlidesElement;
+    new (): HTMLPageSlidesElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-slides': HTMLPageSlidesElement;
+  }
+  interface ElementTagNameMap {
+    'page-slides': HTMLPageSlidesElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-slides': JSXElements.PageSlidesAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageSlidesAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface PageSpinner {
+
+    }
+  }
+
+  interface HTMLPageSpinnerElement extends StencilComponents.PageSpinner, HTMLStencilElement {}
+
+  var HTMLPageSpinnerElement: {
+    prototype: HTMLPageSpinnerElement;
+    new (): HTMLPageSpinnerElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-spinner': HTMLPageSpinnerElement;
+  }
+  interface ElementTagNameMap {
+    'page-spinner': HTMLPageSpinnerElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-spinner': JSXElements.PageSpinnerAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageSpinnerAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface PageTabs {
+
+    }
+  }
+
+  interface HTMLPageTabsElement extends StencilComponents.PageTabs, HTMLStencilElement {}
+
+  var HTMLPageTabsElement: {
+    prototype: HTMLPageTabsElement;
+    new (): HTMLPageTabsElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-tabs': HTMLPageTabsElement;
+  }
+  interface ElementTagNameMap {
+    'page-tabs': HTMLPageTabsElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-tabs': JSXElements.PageTabsAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageTabsAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface PageToast {
+
+    }
+  }
+
+  interface HTMLPageToastElement extends StencilComponents.PageToast, HTMLStencilElement {}
+
+  var HTMLPageToastElement: {
+    prototype: HTMLPageToastElement;
+    new (): HTMLPageToastElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-toast': HTMLPageToastElement;
+  }
+  interface ElementTagNameMap {
+    'page-toast': HTMLPageToastElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-toast': JSXElements.PageToastAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageToastAttributes extends HTMLAttributes {
 
     }
   }
