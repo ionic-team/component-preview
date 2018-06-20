@@ -7,7 +7,7 @@ import { Component, Prop } from '@stencil/core';
 })
 export class PageLoading {
 
-  @Prop({ connect: 'ion-loading-controller' }) loadingCtrl: HTMLIonLoadingControllerElement;
+  @Prop({ connect: 'ion-loading-controller' }) loadingCtrl: any;
 
   async presentLoading() {
     const loading = await this.loadingCtrl.create({

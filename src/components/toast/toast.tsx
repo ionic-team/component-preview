@@ -7,7 +7,7 @@ import { Component, Prop } from '@stencil/core';
 })
 export class PageToast {
 
-  @Prop({ connect: 'ion-toast-controller '}) toastCtrl: HTMLIonToastControllerElement;
+  @Prop({ connect: 'ion-toast-controller '}) toastCtrl: any;
 
   async showToast(position: string) {
     const toast = await this.toastCtrl.create({

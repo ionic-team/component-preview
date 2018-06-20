@@ -9,7 +9,7 @@ export class PageInput {
   @State() firstName: string;
   @State() lastName: string;
 
-  @Prop({ connect: 'ion-alert-controller' }) alertCtrl: HTMLIonAlertControllerElement;
+  @Prop({ connect: 'ion-alert-controller' }) alertCtrl: any;
 
   async processForm(ev) {
     ev.preventDefault();
