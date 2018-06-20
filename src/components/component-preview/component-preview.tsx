@@ -43,22 +43,22 @@ export class ComponentPreview {
         return <page-grid/>;
 
       case 'infinite-scroll':
-        return <div>Infinite Scroll</div>;
+        return <page-infinite-scroll/>;
 
       case 'input':
-        return <div>Input</div>;
+        return <page-input/>;
 
       case 'list':
-        return <div>List</div>;
+        return <page-list/>;
 
       case 'loading':
-        return <div>Loading</div>;
+        return <page-loading/>;
 
       case 'menu':
-        return <div>Menu</div>;
+        return <page-menu/>;
 
       case 'modal':
-        return <div>Modal</div>;
+        return <page-modal/>;
 
       case 'nav':
         return <div>Nav</div>;
@@ -70,28 +70,28 @@ export class ComponentPreview {
         return <div>Radio</div>;
 
       case 'range':
-        return <div>Range</div>;
+        return <page-range/>;
 
       case 'refresher':
-        return <div>Refresher</div>;
+        return <page-refresher/>;
 
       case 'searchbar':
-        return <div>Searchbar</div>;
+        return <page-searchbar/>;
 
       case 'select':
-        return <div>Select</div>;
+        return <page-select/>;
 
       case 'slides':
-        return <div>Slides</div>;
+        return <page-slides/>;
 
       case 'spinner':
-        return <div>Spinner</div>;
+        return <page-spinner/>;
 
       case 'tabs':
-        return <div>Tabs</div>;
+        return <page-tabs/>;
 
       case 'toast':
-        return <div>Toast</div>;
+        return <page-toast/>;
 
       case 'toggle':
         return <div>Toggle</div>;
