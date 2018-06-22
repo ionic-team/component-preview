@@ -949,4 +949,37 @@ declare global {
   }
 }
 
+
+declare global {
+
+  namespace StencilComponents {
+    interface VirtualScroll {
+
+    }
+  }
+
+  interface HTMLVirtualScrollElement extends StencilComponents.VirtualScroll, HTMLStencilElement {}
+
+  var HTMLVirtualScrollElement: {
+    prototype: HTMLVirtualScrollElement;
+    new (): HTMLVirtualScrollElement;
+  };
+  interface HTMLElementTagNameMap {
+    'virtual-scroll': HTMLVirtualScrollElement;
+  }
+  interface ElementTagNameMap {
+    'virtual-scroll': HTMLVirtualScrollElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'virtual-scroll': JSXElements.VirtualScrollAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface VirtualScrollAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
 declare global { namespace JSX { interface StencilJSX {} } }
