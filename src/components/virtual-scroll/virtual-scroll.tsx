@@ -23,9 +23,8 @@ export class VirtualScroll {
     }
 
     virtual.nodeRender = (el, cell) => {
-      this.renderItem(el, cell.value);
+      if (cell.type === 0) return this.renderItem(el, cell.value);
     };
-    
     virtual.items = items;
   }
 

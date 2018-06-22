@@ -2,3 +2,4 @@
 www/
 docs-www/
 node_modules/
+.stencil/
