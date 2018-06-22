@@ -2,10 +2,10 @@ import { Component, Element } from '@stencil/core';
 
 
 @Component({
-  tag: 'virtual-scroll',
+  tag: 'page-virtual-scroll',
   styleUrl: 'virtual-scroll.css'
 })
-export class VirtualScroll {
+export class PageVirtualScroll {
 
   @Element() el: HTMLElement;
 
