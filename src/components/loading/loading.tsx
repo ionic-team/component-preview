@@ -27,7 +27,7 @@ export class PageLoading {
           </ion-toolbar>
         </ion-header>
 
-        <ion-content>
+        <ion-content padding>
           <ion-button expand='block' onClick={() => this.presentLoading()}>Show Loading</ion-button>
         </ion-content>
       </ion-app>
