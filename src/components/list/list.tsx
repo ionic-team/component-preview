@@ -76,36 +76,44 @@ export class PageList {
               <ion-avatar slot='start'>
                 <img src="assets/img/avatar-poe.png"></img>
               </ion-avatar>
-              <h2>Poe</h2>
-              <h3>New Ride</h3>
-              <p>I just upgraded my X-Wing. Next time...</p>
+              <ion-label>
+                <h2>Poe</h2>
+                <h3>New Ride</h3>
+                <p>I just upgraded my X-Wing. Next time...</p>
+              </ion-label>
             </ion-item>
 
             <ion-item>
               <ion-avatar slot='start'>
                 <img src="assets/img/avatar-ben.png"></img>
               </ion-avatar>
-              <h2>Ben</h2>
-              <h3>Move Along</h3>
-              <p>These aren't the droids you're looking for...</p>
+              <ion-label>
+                <h2>Ben</h2>
+                <h3>Move Along</h3>
+                <p>These aren't the droids you're looking for...</p>
+              </ion-label>
             </ion-item>
 
             <ion-item>
               <ion-avatar slot='start'>
                 <img src="assets/img/avatar-leia.png"></img>
               </ion-avatar>
-              <h2>Leia</h2>
-              <h3>You're My Only Hope</h3>
-              <p>I've placed information vital to the survival...</p>
+              <ion-label>
+                <h2>Leia</h2>
+                <h3>You're My Only Hope</h3>
+                <p>I've placed information vital to the survival...</p>
+              </ion-label>
             </ion-item>
 
             <ion-item>
               <ion-avatar slot='start'>
                 <img src="assets/img/avatar-yoda.png"></img>
               </ion-avatar>
-              <h2>Yoda</h2>
-              <h3>Size matters not</h3>
-              <p>Do or do not. There is no try...</p>
+              <ion-label>
+                <h2>Yoda</h2>
+                <h3>Size matters not</h3>
+                <p>Do or do not. There is no try...</p>
+              </ion-label>
             </ion-item>
           </ion-list>
         </ion-content>
