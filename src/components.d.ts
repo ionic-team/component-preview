@@ -953,30 +953,30 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface VirtualScroll {
+    interface PageVirtualScroll {
 
     }
   }
 
-  interface HTMLVirtualScrollElement extends StencilComponents.VirtualScroll, HTMLStencilElement {}
+  interface HTMLPageVirtualScrollElement extends StencilComponents.PageVirtualScroll, HTMLStencilElement {}
 
-  var HTMLVirtualScrollElement: {
-    prototype: HTMLVirtualScrollElement;
-    new (): HTMLVirtualScrollElement;
+  var HTMLPageVirtualScrollElement: {
+    prototype: HTMLPageVirtualScrollElement;
+    new (): HTMLPageVirtualScrollElement;
   };
   interface HTMLElementTagNameMap {
-    'virtual-scroll': HTMLVirtualScrollElement;
+    'page-virtual-scroll': HTMLPageVirtualScrollElement;
   }
   interface ElementTagNameMap {
-    'virtual-scroll': HTMLVirtualScrollElement;
+    'page-virtual-scroll': HTMLPageVirtualScrollElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'virtual-scroll': JSXElements.VirtualScrollAttributes;
+      'page-virtual-scroll': JSXElements.PageVirtualScrollAttributes;
     }
   }
   namespace JSXElements {
-    export interface VirtualScrollAttributes extends HTMLAttributes {
+    export interface PageVirtualScrollAttributes extends HTMLAttributes {
 
     }
   }
