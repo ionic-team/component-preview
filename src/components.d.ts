@@ -689,6 +689,74 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface PopoverPage {
+      'contentEle': HTMLElement;
+      'textEle': any;
+    }
+  }
+
+  interface HTMLPopoverPageElement extends StencilComponents.PopoverPage, HTMLStencilElement {}
+
+  var HTMLPopoverPageElement: {
+    prototype: HTMLPopoverPageElement;
+    new (): HTMLPopoverPageElement;
+  };
+  interface HTMLElementTagNameMap {
+    'popover-page': HTMLPopoverPageElement;
+  }
+  interface ElementTagNameMap {
+    'popover-page': HTMLPopoverPageElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'popover-page': JSXElements.PopoverPageAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PopoverPageAttributes extends HTMLAttributes {
+      'contentEle'?: HTMLElement;
+      'textEle'?: any;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface PagePopover {
+
+    }
+  }
+
+  interface HTMLPagePopoverElement extends StencilComponents.PagePopover, HTMLStencilElement {}
+
+  var HTMLPagePopoverElement: {
+    prototype: HTMLPagePopoverElement;
+    new (): HTMLPagePopoverElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-popover': HTMLPagePopoverElement;
+  }
+  interface ElementTagNameMap {
+    'page-popover': HTMLPagePopoverElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-popover': JSXElements.PagePopoverAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PagePopoverAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface PageRange {
 
     }
