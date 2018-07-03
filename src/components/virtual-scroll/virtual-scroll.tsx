@@ -8,24 +8,24 @@ import { Component, Element } from '@stencil/core';
 export class PageVirtualScroll {
 
   @Element() el: HTMLElement;
+  virtualEl: any;
 
   componentDidLoad() {
-    const virtual = (this.el.querySelector('#virtual') as any);
     const items = Array.from({ length: 500 }, (x, i) => {
       console.log(x);
       return i;
     });
 
-    virtual.itemHeight = () => 45;
-    virtual.headerFn = (item, index) => {
+    this.virtualEl.itemHeight = () => 45;
+    this.virtualEl.headerFn = (item, index) => {
       console.log(item, index);
       return null;
     }
 
-    virtual.nodeRender = (el, cell) => {
+    this.virtualEl.nodeRender = (el, cell) => {
       if (cell.type === 0) return this.renderItem(el, cell.value);
     };
-    virtual.items = items;
+    this.virtualEl.items = items;
   }
 
   renderItem(el, item) {
@@ -50,7 +50,7 @@ export class PageVirtualScroll {
         </ion-header>
 
         <ion-content>
-          <ion-virtual-scroll id="virtual"></ion-virtual-scroll>
+          <ion-virtual-scroll ref={el => this.virtualEl = el}></ion-virtual-scroll>
         </ion-content>
       </ion-app>
     );

@@ -8,15 +8,16 @@ import { Component, Element, Prop } from '@stencil/core';
 export class PagePopover {
 
   @Prop({ connect: 'ion-popover-controller' }) popoverCtrl;
+  contentEl: HTMLElement;
 
   @Element() el: HTMLElement;
 
-  async openPopover(event) {
+  openPopover = async function(event) {
     const popover = await this.popoverCtrl.create({
       component: 'popover-page',
       componentProps: {
-        contentEle: this.el.querySelector('#content .scroll'),
-        textEle: this.el.querySelectorAll('.popoverText')
+        contentEle: this.contentEl.querySelector('.scroll'),
+        textEle: this.contentEl.querySelectorAll('.popoverText')
       },
       ev: event
     });
@@ -39,7 +40,7 @@ export class PagePopover {
           </ion-toolbar>
         </ion-header>
 
-        <ion-content id='content'>
+        <ion-content ref={(el) => this.contentEl = el}>
           <div class="text-to-change">
             <div class='popoverText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel ipsum in purus mollis dictum eget vitae purus. Nulla ultrices est odio, a maximus velit pretium ac. Donec vel elementum mi. Proin elementum pulvinar neque, in lacinia nibh tempus auctor. Nam sapien velit, commodo ac nibh a, maximus ullamcorper nunc. Integer luctus tortor dignissim, dictum neque at, scelerisque purus. Vivamus nec erat vel magna posuere euismod. Sed ac augue eu tellus tincidunt fermentum eget sit amet nunc. Donec sit amet mi libero. Cras nunc arcu, ultrices nec sapien eu, convallis posuere libero. Pellentesque vulputate lacus eros, at lobortis lorem egestas et. Vestibulum tempus quam in efficitur lobortis. Maecenas consectetur consequat sem pharetra aliquet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</div>
 
