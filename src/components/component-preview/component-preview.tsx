@@ -4,12 +4,18 @@ import { Component, Listen, State } from '@stencil/core';
   tag: 'component-preview'
 })
 export class ComponentPreview {
-  @State() active: string = 'popover';
+  @State() active: string = null;
 
   @Listen('window:message')
   handleMessage({ data }: MessageEvent) {
     if (data.active) {
       this.active = data.active;
+    }
+  }
+
+  componentWillLoad() {
+    if (!this.active && window.location.hash) {
+      this.active = window.location.hash.slice(1);
     }
   }
 
