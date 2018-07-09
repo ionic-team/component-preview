@@ -13,7 +13,7 @@ export class PageCheckbox {
             <ion-title>Checkbox</ion-title>
           </ion-toolbar>
         </ion-header>
-        <ion-content padding>
+        <ion-content>
           <ion-list>
             <ion-list-header>Characters</ion-list-header>
 

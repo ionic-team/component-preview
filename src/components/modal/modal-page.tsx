@@ -66,7 +66,7 @@ export class ModalPage {
           </ion-toolbar>
         </ion-header>
 
-        <ion-content padding>
+        <ion-content>
           <ion-list>
             <ion-item>
               <ion-avatar slot='start'>
