@@ -4,7 +4,7 @@ import { Component, Listen, State } from '@stencil/core';
   tag: 'component-preview'
 })
 export class ComponentPreview {
-  @State() active: string = null;
+  @State() active: string = 'popover';
 
   @Listen('window:message')
   handleMessage({ data }: MessageEvent) {
@@ -64,7 +64,7 @@ export class ComponentPreview {
         return <div>Nav</div>;
 
       case 'popover':
-        return <div>Popover</div>;
+        return <page-popover />
 
       case 'radio':
         return <div>Radio</div>;
@@ -97,7 +97,7 @@ export class ComponentPreview {
         return <div>Toggle</div>;
 
       case 'virtual-scroll':
-        return <div>Virtual Scroll</div>;
+        return <page-virtual-scroll></page-virtual-scroll>;
 
       default:
         return (
