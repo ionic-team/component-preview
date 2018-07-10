@@ -51,7 +51,6 @@ export class ModalPage {
 
   componentWillLoad() {
     this.character = this.characters[this.char];
-    console.log(this.character);
   }
 
   dismiss() {
