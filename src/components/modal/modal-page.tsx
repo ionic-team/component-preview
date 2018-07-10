@@ -12,8 +12,10 @@ export class ModalPage {
 
   @State() character: any;
 
+  characters: any[];
+
   constructor() {
-    const characters = [
+    this.characters = [
       {
         name: 'Gollum',
         quote: 'Sneaky little hobbitses!',
@@ -45,7 +47,11 @@ export class ModalPage {
         ]
       }
     ];
-    this.character = characters[this.char];
+  }
+
+  componentWillLoad() {
+    this.character = this.characters[this.char];
+    console.log(this.character);
   }
 
   dismiss() {
