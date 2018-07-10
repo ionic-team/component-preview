@@ -16,7 +16,7 @@ export class PageSlides {
           </ion-toolbar>
         </ion-header>
 
-        <ion-content>
+        <ion-content padding scrollEnabled={false}>
           <ion-slides pager={false}>
 
             <ion-slide>
