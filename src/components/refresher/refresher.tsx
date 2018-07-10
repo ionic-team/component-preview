@@ -7,12 +7,12 @@ import { Component, State } from '@stencil/core';
 export class PageRefresher {
   @State() list = [0, 1, 2, 3, 4, 5];
 
-  doRefresh(refresher) {
-    console.log('Begin async operation', refresher);
+  doRefresh(ev: CustomEvent) {
+    console.log('Begin async operation', ev);
     setTimeout(() => {
-      console.log('Async operation has ended');
-      this.list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-      refresher.complete();
+      const newItems = [6, 7, 8, 9, 10];
+      this.list = this.list.concat(newItems);
+      (ev.target as any).complete();
     }, 2000);
   }
 
@@ -25,11 +25,9 @@ export class PageRefresher {
           </ion-toolbar>
         </ion-header>
         <ion-content>
-          <ion-refresher
-            slot="fixed"
-            onIonRefresh={event => this.doRefresh(event)}
-          >
-            <ion-refresher-content />
+          <ion-refresher id="refresher" disabled="false" slot="fixed" onIonRefresh={event => this.doRefresh(event)}>
+            <ion-refresher-content pulling-text="Pull to refresh..." refreshing-spinner="bubbles" refreshing-text="Refreshing...">
+            </ion-refresher-content>
           </ion-refresher>
 
           <ion-list>
