@@ -689,6 +689,105 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface NavDetails {
+      'tech': any;
+    }
+  }
+
+  interface HTMLNavDetailsElement extends StencilComponents.NavDetails, HTMLStencilElement {}
+
+  var HTMLNavDetailsElement: {
+    prototype: HTMLNavDetailsElement;
+    new (): HTMLNavDetailsElement;
+  };
+  interface HTMLElementTagNameMap {
+    'nav-details': HTMLNavDetailsElement;
+  }
+  interface ElementTagNameMap {
+    'nav-details': HTMLNavDetailsElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'nav-details': JSXElements.NavDetailsAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface NavDetailsAttributes extends HTMLAttributes {
+      'tech'?: any;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface NavHome {
+
+    }
+  }
+
+  interface HTMLNavHomeElement extends StencilComponents.NavHome, HTMLStencilElement {}
+
+  var HTMLNavHomeElement: {
+    prototype: HTMLNavHomeElement;
+    new (): HTMLNavHomeElement;
+  };
+  interface HTMLElementTagNameMap {
+    'nav-home': HTMLNavHomeElement;
+  }
+  interface ElementTagNameMap {
+    'nav-home': HTMLNavHomeElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'nav-home': JSXElements.NavHomeAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface NavHomeAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface PageNav {
+
+    }
+  }
+
+  interface HTMLPageNavElement extends StencilComponents.PageNav, HTMLStencilElement {}
+
+  var HTMLPageNavElement: {
+    prototype: HTMLPageNavElement;
+    new (): HTMLPageNavElement;
+  };
+  interface HTMLElementTagNameMap {
+    'page-nav': HTMLPageNavElement;
+  }
+  interface ElementTagNameMap {
+    'page-nav': HTMLPageNavElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'page-nav': JSXElements.PageNavAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PageNavAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface PopoverPage {
       'contentEle': HTMLElement;
       'textEle': any;

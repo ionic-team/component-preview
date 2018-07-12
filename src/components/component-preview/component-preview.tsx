@@ -67,7 +67,7 @@ export class ComponentPreview {
         return <page-modal/>;
 
       case 'nav':
-        return <div>Nav</div>;
+        return <page-nav />;
 
       case 'popover':
         return <page-popover />
