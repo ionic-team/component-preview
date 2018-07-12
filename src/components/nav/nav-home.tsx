@@ -67,7 +67,6 @@ export class PageNav {
 
   navToDetail(tech) {
     (this.el.closest('ion-nav') as any).push('nav-details', { tech });
-    console.log('hello world');
   }
 
   render() {

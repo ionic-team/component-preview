@@ -8,10 +8,6 @@ export class NavDetails {
 
   @Prop() tech: any;
 
-  componentDidLoad() {
-    console.log(this.tech);
-  }
-
   render() {
     return (
       <ion-app>
@@ -26,7 +22,7 @@ export class NavDetails {
 
         <ion-content padding>
           {/*<ion-icon [name]="'logo-' + item.icon" [ngStyle]="{'color': item.color}"></ion-icon>*/}
-          <ion-icon name={`logo-${this.tech.icon}`} style={{'color': this.tech.color}} size='large'></ion-icon>
+          <ion-icon name={`logo-${this.tech.icon}`} style={{'color': this.tech.color}} size='large'y></ion-icon>
           <p>{this.tech.description}</p>
         </ion-content>
       </ion-app>
