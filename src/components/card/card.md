@@ -4,7 +4,7 @@ Card components are a great way to display important pieces of content, and are 
 
 ```html
 <ion-card>
-  <ion-img src='/assets/myImg.png'></ion-img>
+  <ion-img src="/assets/myImg.png"></ion-img>
 
   <ion-card-content>
     <ion-card-title>Hello World</ion-card-title>

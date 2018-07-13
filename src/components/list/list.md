@@ -5,7 +5,7 @@ The list component is used to display rows of information, such as a contact lis
 ```html
 <ion-list>
   <ion-item>
-    <ion-avatar slot='start'>
+    <ion-avatar slot="start">
       <img src="assets/img/avatar-finn.png"></img>
     </ion-avatar>
     <ion-label>

@@ -4,7 +4,7 @@ Refresh provides pull-to-refresh functionality on a content component. A common 
 
 ```html
 <ion-content>
-  <ion-refresher slot='fixed'>
+  <ion-refresher slot="fixed">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
 </ion-content>

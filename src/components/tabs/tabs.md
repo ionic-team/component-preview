@@ -4,8 +4,8 @@ Tabs enable tabbed navigation, a standard navigation pattern in modern apps. Tab
 
 ```html
 <ion-tabs>
-  <ion-tab label='Music' icon='musical-note'></ion-tab>
-  <ion-tab label='Profile' icon='person'></ion-tab>
-  <ion-tab label='people' icon='people'></ion-tab>
+  <ion-tab label="Music" icon="musical-note"></ion-tab>
+  <ion-tab label="Profile" icon="person"></ion-tab>
+  <ion-tab label="people" icon="people"></ion-tab>
 </ion-tabs>
 ```
