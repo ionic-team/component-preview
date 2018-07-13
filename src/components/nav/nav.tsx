@@ -2,8 +2,7 @@ import { Component } from '@stencil/core';
 
 
 @Component({
-  tag: 'page-nav',
-  styleUrl: 'nav.css'
+  tag: 'page-nav'
 })
 export class PageNav {
 
