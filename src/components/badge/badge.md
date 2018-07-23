@@ -13,11 +13,4 @@ The Badge component is a small component that typically communicates a numerical
 <ion-badge color="success">44</ion-badge>
 <ion-badge color="warning">55</ion-badge>
 <ion-badge color="danger">66</ion-badge>
-
-<!-- Item with badge on left and right -->
-<ion-item>
-  <ion-badge slot="start">11</ion-badge>
-  <ion-label>My Item</ion-label>
-  <ion-badge slot="end">22</ion-badge>
-</ion-item>
 ```
