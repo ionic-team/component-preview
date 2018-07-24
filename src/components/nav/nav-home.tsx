@@ -76,7 +76,7 @@ export class PageNav {
           <ion-toolbar>
             <ion-title>Nav</ion-title>
           </ion-toolbar>
-        </ion-header>,
+        </ion-header>
 
         <ion-content>
           <ion-list>
