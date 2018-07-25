@@ -2,9 +2,10 @@
   "name": "component-preview",
   "version": "0.1.0",
   "scripts": {
-    "serve": "stencil-dev-server",
-    "start": "stencil build --dev --www --watch --serve",
-    "build": "stencil build"
+    "build": "stencil build",
+    "dev": "stencil build --dev --www --watch --serve",
+    "start": "npm run dev",
+    "serve": "stencil-dev-server"
   },
   "author": "Ionic Team",
   "license": "MIT",
