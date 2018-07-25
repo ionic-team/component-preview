@@ -17,26 +17,25 @@ export class PageRefresher {
   }
 
   render() {
-    return (
-      <ion-app>
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Refresher</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content>
-          <ion-refresher id="refresher" disabled="false" slot="fixed" onIonRefresh={event => this.doRefresh(event)}>
-            <ion-refresher-content pulling-text="Pull to refresh..." refreshing-spinner="bubbles" refreshing-text="Refreshing...">
-            </ion-refresher-content>
-          </ion-refresher>
+    return [
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Refresher</ion-title>
+        </ion-toolbar>
+      </ion-header>,
 
-          <ion-list>
-            {this.list.map(item => {
-              return <ion-item>{item}</ion-item>;
-            })}
-          </ion-list>
-        </ion-content>
-      </ion-app>
-    );
+      <ion-content>
+        <ion-refresher id="refresher" disabled={false} slot="fixed" onIonRefresh={event => this.doRefresh(event)}>
+          <ion-refresher-content pulling-text="Pull to refresh..." refreshing-spinner="bubbles" refreshing-text="Refreshing...">
+          </ion-refresher-content>
+        </ion-refresher>
+
+        <ion-list>
+          {this.list.map(item => {
+            return <ion-item>{item}</ion-item>;
+          })}
+        </ion-list>
+      </ion-content>
+    ];
   }
 }

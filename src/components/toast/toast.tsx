@@ -39,22 +39,20 @@ export class PageToast {
   }
 
   render() {
-    return (
-      <ion-app>
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Toast</ion-title>
-          </ion-toolbar>
-        </ion-header>
+    return [
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Toast</ion-title>
+        </ion-toolbar>
+      </ion-header>,
 
-        <ion-content padding>
-          <ion-button expand='block' onClick={() => this.showToast('top')}>Show Toast Top Position</ion-button>
-          <ion-button expand='block' onClick={() => this.showToast('middle')}>Show Toast Middle Position</ion-button>
-          <ion-button expand='block' onClick={() => this.showToast('bottom')}>Show Toast Bottom Position</ion-button>
-          <ion-button expand='block' onClick={() => this.showLongToast()}>Show Long Toast</ion-button>
-          <ion-button expand='block' onClick={() => this.showToastWithCloseButton()}>Show Toast W/ Close ion-button</ion-button>
-        </ion-content>
-      </ion-app>
-    );
+      <ion-content padding>
+        <ion-button expand='block' onClick={() => this.showToast('top')}>Show Toast Top Position</ion-button>
+        <ion-button expand='block' onClick={() => this.showToast('middle')}>Show Toast Middle Position</ion-button>
+        <ion-button expand='block' onClick={() => this.showToast('bottom')}>Show Toast Bottom Position</ion-button>
+        <ion-button expand='block' onClick={() => this.showLongToast()}>Show Long Toast</ion-button>
+        <ion-button expand='block' onClick={() => this.showToastWithCloseButton()}>Show Toast W/ Close ion-button</ion-button>
+      </ion-content>
+    ];
   }
 }

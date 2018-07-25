@@ -2,8 +2,7 @@ import { Component, Prop } from '@stencil/core';
 
 
 @Component({
-  tag: 'page-modal',
-  styleUrl: 'modal.css'
+  tag: 'page-modal'
 })
 export class modal {
   @Prop({ connect: 'ion-modal-controller' }) modalCtrl: any;
@@ -17,32 +16,30 @@ export class modal {
   }
 
   render() {
-    return (
-      <ion-app>
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Modal</ion-title>
-          </ion-toolbar>
-        </ion-header>
+    return [
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+        </ion-toolbar>
+      </ion-header>,
 
-        <ion-content padding>
-          <ion-list>
-            <ion-list-header>
-              Hobbits
-            </ion-list-header>
+      <ion-content padding>
+        <ion-list>
+          <ion-list-header>
+            Hobbits
+          </ion-list-header>
 
-            <ion-item onClick={() => this.openModal(0)}>
-              Gollum
-            </ion-item>
-            <ion-item onClick={() => this.openModal(1)}>
-              Frodo Baggins
-            </ion-item>
-            <ion-item onClick={() => this.openModal(2)}>
-              Sam
-            </ion-item>
-          </ion-list>
-        </ion-content>
-      </ion-app>
-    )
+          <ion-item onClick={() => this.openModal(0)}>
+            Gollum
+          </ion-item>
+          <ion-item onClick={() => this.openModal(1)}>
+            Frodo Baggins
+          </ion-item>
+          <ion-item onClick={() => this.openModal(2)}>
+            Sam
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    ];
   }
 }

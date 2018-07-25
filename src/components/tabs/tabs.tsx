@@ -8,43 +8,41 @@ import { Component } from '@stencil/core';
 export class PageTabs {
   render() {
     return (
-      <ion-app>
-        <ion-tabs>
-          <ion-tab selected label="Music" icon='musical-note'>
-            <ion-header>
-              <ion-toolbar>
-                <ion-title>Music</ion-title>
-              </ion-toolbar>
-            </ion-header>
+      <ion-tabs>
+        <ion-tab selected label="Music" icon='musical-note'>
+          <ion-header>
+            <ion-toolbar>
+              <ion-title>Music</ion-title>
+            </ion-toolbar>
+          </ion-header>
 
-            <ion-content padding>
-              <h1>Music</h1>
-            </ion-content>
-          </ion-tab>
-          <ion-tab label="Movies" icon='videocam'>
-            <ion-header>
-              <ion-toolbar>
-                <ion-title>Movies</ion-title>
-              </ion-toolbar>
-            </ion-header>
+          <ion-content padding>
+            <h1>Music</h1>
+          </ion-content>
+        </ion-tab>
+        <ion-tab label="Movies" icon='videocam'>
+          <ion-header>
+            <ion-toolbar>
+              <ion-title>Movies</ion-title>
+            </ion-toolbar>
+          </ion-header>
 
-            <ion-content padding>
-              <h1>Movies</h1>
-            </ion-content>
-          </ion-tab>
-          <ion-tab label="Games" icon='logo-game-controller-b'>
-            <ion-header>
-              <ion-toolbar>
-                <ion-title>Games</ion-title>
-              </ion-toolbar>
-            </ion-header>
+          <ion-content padding>
+            <h1>Movies</h1>
+          </ion-content>
+        </ion-tab>
+        <ion-tab label="Games" icon='logo-game-controller-b'>
+          <ion-header>
+            <ion-toolbar>
+              <ion-title>Games</ion-title>
+            </ion-toolbar>
+          </ion-header>
 
-            <ion-content padding>
-              <h1>Games</h1>
-            </ion-content>
-          </ion-tab>
-        </ion-tabs>
-      </ion-app>
-    )
+          <ion-content padding>
+            <h1>Games</h1>
+          </ion-content>
+        </ion-tab>
+      </ion-tabs>
+    );
   }
 }

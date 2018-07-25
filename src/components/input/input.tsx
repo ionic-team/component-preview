@@ -2,8 +2,7 @@ import { Component, Prop, State } from '@stencil/core';
 
 
 @Component({
-  tag: 'page-input',
-  styleUrl: 'input.css'
+  tag: 'page-input'
 })
 export class PageInput {
   @State() firstName: string;
@@ -34,34 +33,32 @@ export class PageInput {
 
 
   render() {
-    return (
-      <ion-app>
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Input</ion-title>
-          </ion-toolbar>
-        </ion-header>
+    return [
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Input</ion-title>
+        </ion-toolbar>
+      </ion-header>,
 
-        <ion-content padding>
-          <form onSubmit={(event) => this.processForm(event)}>
-            <ion-list>
+      <ion-content padding>
+        <form onSubmit={(event) => this.processForm(event)}>
+          <ion-list>
 
-              <ion-item>
-                <ion-input required onInput={(event) => this.handleFirstNameValue(event)} value={this.firstName} type="text" placeholder="First Name"></ion-input>
-              </ion-item>
+            <ion-item>
+              <ion-input required onInput={(event) => this.handleFirstNameValue(event)} value={this.firstName} type="text" placeholder="First Name"></ion-input>
+            </ion-item>
 
-              <ion-item>
-                <ion-input required onInput={(event) => this.handleLastNameValue(event)} value={this.lastName} type="text" placeholder="Last Name"></ion-input>
-              </ion-item>
+            <ion-item>
+              <ion-input required onInput={(event) => this.handleLastNameValue(event)} value={this.lastName} type="text" placeholder="Last Name"></ion-input>
+            </ion-item>
 
-            </ion-list>
+          </ion-list>
 
-            <div>
-              <ion-button expand='block' type="submit">Create Account</ion-button>
-            </div>
-          </form>
-        </ion-content>
-      </ion-app>
-    );
+          <div>
+            <ion-button expand='block' type="submit">Create Account</ion-button>
+          </div>
+        </form>
+      </ion-content>
+    ];
   }
 }

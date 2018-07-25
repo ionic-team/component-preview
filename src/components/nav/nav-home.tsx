@@ -71,30 +71,28 @@ export class PageNav {
 
   render() {
     return [
-      <ion-app>
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Nav</ion-title>
-          </ion-toolbar>
-        </ion-header>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Nav</ion-title>
+        </ion-toolbar>
+      </ion-header>,
 
-        <ion-content>
-          <ion-list>
-            {
-              this.techStacks.map((tech) => {
-                return (
-                  <ion-item onClick={() => this.navToDetail(tech)}>
-                    <ion-icon slot='start' name={`logo-${tech.icon}`} style={{ 'color': `${tech.color}` }}></ion-icon>
-                    <ion-label>
-                      <h3>{tech.title}</h3>
-                    </ion-label>
-                  </ion-item>
-                )
-              })
-            }
-          </ion-list>
-        </ion-content>
-      </ion-app>
-    ]
+      <ion-content>
+        <ion-list>
+          {
+            this.techStacks.map((tech) => {
+              return (
+                <ion-item onClick={() => this.navToDetail(tech)}>
+                  <ion-icon slot='start' name={`logo-${tech.icon}`} style={{ 'color': `${tech.color}` }}></ion-icon>
+                  <ion-label>
+                    <h3>{tech.title}</h3>
+                  </ion-label>
+                </ion-item>
+              )
+            })
+          }
+        </ion-list>
+      </ion-content>
+    ];
   }
 }

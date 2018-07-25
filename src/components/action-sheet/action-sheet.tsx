@@ -1,8 +1,7 @@
 import { Component } from '@stencil/core';
 
 @Component({
-  tag: 'page-action-sheet',
-  styleUrl: 'action-sheet.css'
+  tag: 'page-action-sheet'
 })
 export class PageActionSheet {
   controller: any;
@@ -30,18 +29,16 @@ export class PageActionSheet {
   }
 
   render() {
-    return (
-      <ion-app>
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Action Sheet</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content padding>
-          <ion-action-sheet-controller ref={node => { this.controller = node; }}/>
-          <ion-button expand="block" onClick={this.showActionSheet}>Show Action Sheet</ion-button>
-        </ion-content>
-      </ion-app>
-    );
+    return [
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Action Sheet</ion-title>
+        </ion-toolbar>
+      </ion-header>,
+      <ion-content padding>
+        <ion-action-sheet-controller ref={node => { this.controller = node; }}/>
+        <ion-button expand="block" onClick={this.showActionSheet}>Show Action Sheet</ion-button>
+      </ion-content>
+    ];
   }
 }

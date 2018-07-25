@@ -2,8 +2,7 @@ import { Component, State } from '@stencil/core';
 
 
 @Component({
-  tag: 'page-infinite-scroll',
-  styleUrl: 'infinite-scroll.css'
+  tag: 'page-infinite-scroll'
 })
 export class PageInfiniteScroll {
   @State() items: any[];
@@ -28,25 +27,23 @@ export class PageInfiniteScroll {
   }
 
   render() {
-    return (
-      <ion-app>
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Infinite Scroll</ion-title>
-          </ion-toolbar>
-        </ion-header>
+    return [
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Infinite Scroll</ion-title>
+        </ion-toolbar>
+      </ion-header>,
 
-        <ion-content>
-          <app-list items={this.items}></app-list>
+      <ion-content>
+        <app-list items={this.items}></app-list>
 
-          <ion-infinite-scroll onIonInfinite={(event) => this.doInfinite(event)}>
-            <ion-infinite-scroll-content
-              loadingSpinner="bubbles"
-              loadingText="Loading more data...">
-            </ion-infinite-scroll-content>
-          </ion-infinite-scroll>
-        </ion-content>
-      </ion-app>
-    );
+        <ion-infinite-scroll onIonInfinite={(event) => this.doInfinite(event)}>
+          <ion-infinite-scroll-content
+            loadingSpinner="bubbles"
+            loadingText="Loading more data...">
+          </ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+      </ion-content>
+    ];
   }
 }

@@ -58,47 +58,45 @@ export class ModalPage {
   }
 
   render() {
-    return (
-      <ion-app>
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Modal Page</ion-title>
+    return [
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Modal Page</ion-title>
 
-            <ion-buttons slot="end">
-              <ion-button onClick={() => this.dismiss()}>Cancel</ion-button>
-              <ion-button onClick={() => this.dismiss()}>Post</ion-button>
-            </ion-buttons>
-          </ion-toolbar>
-        </ion-header>
+          <ion-buttons slot="end">
+            <ion-button onClick={() => this.dismiss()}>Cancel</ion-button>
+            <ion-button onClick={() => this.dismiss()}>Post</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>,
 
-        <ion-content>
-          <ion-list>
-            <ion-item>
-              <ion-avatar slot='start'>
-                <img src={this.character.image}></img>
-              </ion-avatar>
-              <ion-label>
-                <h2>{this.character.name}</h2>
-                <p>{this.character.quote}</p>
-              </ion-label>
-            </ion-item>
-            {
-              this.character.items.map((item) => {
-                return (
-                  <ion-item>
-                    <ion-label>
-                      <h2>{item.title}</h2>
-                    </ion-label>
-                    <ion-note slot='end'>
-                      {item.note}
-                    </ion-note>
-                  </ion-item>
-                )
-              })
-            }
-          </ion-list>
-        </ion-content>
-      </ion-app>
-    )
+      <ion-content>
+        <ion-list>
+          <ion-item>
+            <ion-avatar slot='start'>
+              <img src={this.character.image}></img>
+            </ion-avatar>
+            <ion-label>
+              <h2>{this.character.name}</h2>
+              <p>{this.character.quote}</p>
+            </ion-label>
+          </ion-item>
+          {
+            this.character.items.map((item) => {
+              return (
+                <ion-item>
+                  <ion-label>
+                    <h2>{item.title}</h2>
+                  </ion-label>
+                  <ion-note slot='end'>
+                    {item.note}
+                  </ion-note>
+                </ion-item>
+              )
+            })
+          }
+        </ion-list>
+      </ion-content>
+    ];
   }
 }

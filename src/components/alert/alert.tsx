@@ -1,8 +1,7 @@
 import { Component } from '@stencil/core';
 
 @Component({
-  tag: 'page-alert',
-  styleUrl: 'alert.css'
+  tag: 'page-alert'
 })
 export class PageAlert {
   controller: any;
@@ -19,18 +18,16 @@ export class PageAlert {
   }
 
   render() {
-    return (
-      <ion-app>
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Alert</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content padding>
-          <ion-alert-controller ref={node => { this.controller = node; }}/>
-          <ion-button expand="block" onClick={this.showAlert}>Show Alert</ion-button>
-        </ion-content>
-      </ion-app>
-    );
+    return [
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Alert</ion-title>
+        </ion-toolbar>
+      </ion-header>,
+      <ion-content padding>
+        <ion-alert-controller ref={node => { this.controller = node; }}/>
+        <ion-button expand="block" onClick={this.showAlert}>Show Alert</ion-button>
+      </ion-content>
+    ];
   }
 }

@@ -71,31 +71,29 @@ export class PageSearchbar {
   }
 
   render() {
-    return (
-      <ion-app>
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Searchbar</ion-title>
-          </ion-toolbar>
-        </ion-header>
+    return [
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Searchbar</ion-title>
+        </ion-toolbar>
+      </ion-header>,
 
-        <ion-content>
-          <ion-searchbar onIonInput={(event) => this.getItems(event)}></ion-searchbar>
-          <ion-list>
-            {
-              this.items.map((item) => {
-                return (
-                  <ion-item>
-                    <ion-label>
-                      {item}
-                    </ion-label>
-                  </ion-item>
-                )
-              })
-            }
-          </ion-list>
-        </ion-content>
-      </ion-app>
-    );
+      <ion-content>
+        <ion-searchbar onIonInput={(event) => this.getItems(event)}></ion-searchbar>
+        <ion-list>
+          {
+            this.items.map((item) => {
+              return (
+                <ion-item>
+                  <ion-label>
+                    {item}
+                  </ion-label>
+                </ion-item>
+              )
+            })
+          }
+        </ion-list>
+      </ion-content>
+    ];
   }
 }

@@ -1,11 +1,11 @@
 import '@ionic/core';
-
 import { Component, Listen, State } from '@stencil/core';
 
 @Component({
   tag: 'component-preview'
 })
 export class ComponentPreview {
+
   @State() active: string = null;
 
   @Listen('window:message')
@@ -21,7 +21,7 @@ export class ComponentPreview {
     }
   }
 
-  render() {
+  private renderPage() {
     switch (this.active) {
       case 'action-sheet':
         return <page-action-sheet></page-action-sheet>;
@@ -69,7 +69,7 @@ export class ComponentPreview {
         return <page-modal></page-modal>;
 
       case 'nav':
-        return <page-nav ></page-nav >;
+        return <page-nav></page-nav >;
 
       case 'popover':
         return <page-popover></page-popover>;
@@ -108,19 +108,29 @@ export class ComponentPreview {
         return <page-virtual-scroll></page-virtual-scroll>;
 
       default:
-        return (
-          <ion-app>
-            <ion-content padding>
-              <ion-icon name="logo-ionic" color="primary" style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform : 'translate(-50%, -50%)',
-                fontSize: '6em'
-              }}/>
-            </ion-content>
-          </ion-app>
-        );
+        return this.renderDefault();
     }
+  }
+
+  private renderDefault() {
+    return (
+      <ion-content padding>
+        <ion-icon name="logo-ionic" color="primary" style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform : 'translate(-50%, -50%)',
+          fontSize: '6em'
+        }}/>
+      </ion-content>
+    );
+  }
+
+  render() {
+    return (
+      <ion-app>
+        { this.renderPage() }
+      </ion-app>
+    );
   }
 }
