@@ -6,7 +6,7 @@ Menus are a common navigation pattern for apps. Menus can either be permanently 
 <ion-menu side="start">
   <ion-header>
     <ion-toolbar color="secondary">
-      <ion-title>Left Menu</ion-title>
+      <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
 </ion-menu>
