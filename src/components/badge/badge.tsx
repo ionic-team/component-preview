@@ -13,7 +13,7 @@ export class PageBadge {
             <ion-title>Badge</ion-title>
           </ion-toolbar>
         </ion-header>
-        <ion-content padding>
+        <ion-content>
           <ion-list>
             <ion-list-header>Badges</ion-list-header>
             <ion-item>
