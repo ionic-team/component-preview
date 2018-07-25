@@ -10,7 +10,7 @@ export class NavDetails {
 
   render() {
     return [
-      <ion-header>
+      <ion-header translucent>
         <ion-toolbar>
           <ion-buttons slot='start'>
             <ion-back-button defaultHref='/'></ion-back-button>
@@ -19,7 +19,7 @@ export class NavDetails {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content padding>
+      <ion-content fullscreen padding>
         <ion-icon name={`logo-${this.tech.icon}`} style={{'color': this.tech.color}} size='large'></ion-icon>
         <p>{this.tech.description}</p>
       </ion-content>

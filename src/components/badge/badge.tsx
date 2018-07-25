@@ -7,12 +7,12 @@ import { Component } from '@stencil/core';
 export class PageBadge {
   render() {
     return [
-      <ion-header>
+      <ion-header translucent>
         <ion-toolbar>
           <ion-title>Badge</ion-title>
         </ion-toolbar>
       </ion-header>,
-      <ion-content>
+      <ion-content fullscreen>
         <ion-list>
           <ion-list-header>Badges</ion-list-header>
           <ion-item>

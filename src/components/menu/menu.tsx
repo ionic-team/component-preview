@@ -32,12 +32,12 @@ export class PageMenu {
   render() {
     return [
       <ion-menu type="overlay">
-        <ion-header>
+        <ion-header translucent>
           <ion-toolbar>
             <ion-title>Menu</ion-title>
           </ion-toolbar>
         </ion-header>
-        <ion-content forceOverscroll={false}>
+        <ion-content fullscreen forceOverscroll={false}>
           <ion-list>
             <ion-list-header>
               Navigate

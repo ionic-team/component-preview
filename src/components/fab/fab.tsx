@@ -6,13 +6,13 @@ import { Component } from '@stencil/core';
 export class PageFab {
   render() {
     return [
-      <ion-header>
+      <ion-header translucent>
         <ion-toolbar>
           <ion-title>Fab</ion-title>
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content padding>
+      <ion-content fullscreen padding>
         <ion-fab horizontal="end" vertical="top" slot="fixed" edge>
           <ion-fab-button>
             <ion-icon name="add"/>

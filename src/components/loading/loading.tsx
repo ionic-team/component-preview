@@ -19,13 +19,13 @@ export class PageLoading {
 
   render() {
     return [
-      <ion-header>
+      <ion-header translucent>
         <ion-toolbar>
           <ion-title>Loading</ion-title>
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content padding>
+      <ion-content fullscreen padding>
         <ion-button expand='block' onClick={() => this.presentLoading()}>Show Loading</ion-button>
       </ion-content>
     ];

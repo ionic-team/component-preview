@@ -14,13 +14,13 @@ export class PageRange {
 
   render() {
     return [
-      <ion-header>
+      <ion-header translucent>
         <ion-toolbar>
           <ion-title>Range</ion-title>
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content>
+      <ion-content fullscreen>
         <ion-list>
           <ion-list-header>
             Adjust Display

@@ -7,13 +7,13 @@ import { Component } from '@stencil/core';
 export class ProfilePage {
   render() {
     return [
-      <ion-header>
+      <ion-header translucent>
         <ion-toolbar>
           <ion-title>Profile</ion-title>
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content padding>
+      <ion-content fullscreen padding>
         <h1>Welcome to the profile page</h1>
       </ion-content>
     ];

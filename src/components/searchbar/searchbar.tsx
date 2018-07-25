@@ -72,13 +72,13 @@ export class PageSearchbar {
 
   render() {
     return [
-      <ion-header>
+      <ion-header translucent>
         <ion-toolbar>
           <ion-title>Searchbar</ion-title>
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content>
+      <ion-content fullscreen>
         <ion-searchbar onIonInput={(event) => this.getItems(event)}></ion-searchbar>
         <ion-list>
           {

@@ -7,12 +7,12 @@ import { Component } from '@stencil/core';
 export class PageCard {
   render() {
     return [
-      <ion-header>
+      <ion-header translucent>
         <ion-toolbar>
           <ion-title>Card</ion-title>
         </ion-toolbar>
       </ion-header>,
-      <ion-content>
+      <ion-content fullscreen>
         <ion-card>
           <img src="./assets/madison.jpg"/>
           <ion-card-header>
