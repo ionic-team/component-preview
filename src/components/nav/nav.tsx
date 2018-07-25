@@ -7,8 +7,8 @@ import { Component } from '@stencil/core';
 export class PageNav {
 
   render() {
-    return [
+    return (
       <ion-nav root='nav-home'></ion-nav>
-    ]
+    );
   }
 }

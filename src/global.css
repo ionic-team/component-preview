@@ -17,3 +17,7 @@
 body {
   margin: 0;
 }
+
+ion-toolbar {
+  --background: white;
+}

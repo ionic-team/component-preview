@@ -72,13 +72,13 @@ export class PageNav {
   render() {
     return [
       <ion-app>
-        <ion-header>
+        <ion-header translucent>
           <ion-toolbar>
             <ion-title>Nav</ion-title>
           </ion-toolbar>
         </ion-header>
 
-        <ion-content>
+        <ion-content fullscreen>
           <ion-list>
             {
               this.techStacks.map((tech) => {

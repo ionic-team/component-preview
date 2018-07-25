@@ -21,12 +21,12 @@ export class PageAlert {
   render() {
     return (
       <ion-app>
-        <ion-header>
+        <ion-header translucent>
           <ion-toolbar>
             <ion-title>Alert</ion-title>
           </ion-toolbar>
         </ion-header>
-        <ion-content padding>
+        <ion-content fullscreen padding>
           <ion-alert-controller ref={node => { this.controller = node; }}/>
           <ion-button expand="block" onClick={this.showAlert}>Show Alert</ion-button>
         </ion-content>

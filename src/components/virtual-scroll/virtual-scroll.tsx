@@ -43,13 +43,13 @@ export class PageVirtualScroll {
   render() {
     return (
       <ion-app>
-        <ion-header>
+        <ion-header translucent>
           <ion-toolbar>
             <ion-title>Virtual Scroll</ion-title>
           </ion-toolbar>
         </ion-header>
 
-        <ion-content>
+        <ion-content fullscreen>
           <ion-virtual-scroll ref={el => this.virtualEl = el}></ion-virtual-scroll>
         </ion-content>
       </ion-app>

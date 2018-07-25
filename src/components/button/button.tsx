@@ -8,12 +8,12 @@ export class PageButton {
   render() {
     return (
       <ion-app>
-        <ion-header>
+        <ion-header translucent>
           <ion-toolbar>
             <ion-title>Button</ion-title>
           </ion-toolbar>
         </ion-header>
-        <ion-content padding>
+        <ion-content fullscreen padding>
           <p><ion-button color="light">Light</ion-button></p>
           <p><ion-button>Default</ion-button></p>
           <p><ion-button color="secondary">Secondary</ion-button></p>

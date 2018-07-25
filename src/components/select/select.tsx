@@ -26,13 +26,13 @@ export class PageSelect {
   render() {
     return (
       <ion-app>
-        <ion-header>
+        <ion-header translucent>
           <ion-toolbar>
             <ion-title>Select</ion-title>
           </ion-toolbar>
         </ion-header>
 
-        <ion-content>
+        <ion-content fullscreen>
           <ion-list>
             <ion-item>
               <ion-label>Gender</ion-label>

@@ -8,12 +8,12 @@ export class PageCheckbox {
   render() {
     return (
       <ion-app>
-        <ion-header>
+        <ion-header translucent>
           <ion-toolbar>
             <ion-title>Checkbox</ion-title>
           </ion-toolbar>
         </ion-header>
-        <ion-content>
+        <ion-content fullscreen>
           <ion-list>
             <ion-list-header>Characters</ion-list-header>
 
