@@ -10,13 +10,13 @@ export class PageSlides {
   render() {
     return (
       <ion-app>
-        <ion-header translucent>
+        <ion-header>
           <ion-toolbar>
             <ion-title>Slides</ion-title>
           </ion-toolbar>
         </ion-header>
 
-        <ion-content fullscreen padding scrollEnabled={false}>
+        <ion-content padding scrollEnabled={false}>
           <ion-slides pager={false}>
 
             <ion-slide>

@@ -41,13 +41,13 @@ export class PageToast {
   render() {
     return (
       <ion-app>
-        <ion-header translucent>
+        <ion-header>
           <ion-toolbar>
             <ion-title>Toast</ion-title>
           </ion-toolbar>
         </ion-header>
 
-        <ion-content fullscreen padding>
+        <ion-content padding>
           <ion-button expand='block' onClick={() => this.showToast('top')}>Show Toast Top Position</ion-button>
           <ion-button expand='block' onClick={() => this.showToast('middle')}>Show Toast Middle Position</ion-button>
           <ion-button expand='block' onClick={() => this.showToast('bottom')}>Show Toast Bottom Position</ion-button>

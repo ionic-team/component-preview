@@ -10,13 +10,13 @@ export class PageList {
   render() {
     return (
       <ion-app>
-        <ion-header translucent>
+        <ion-header>
           <ion-toolbar>
             <ion-title>List</ion-title>
           </ion-toolbar>
         </ion-header>
 
-        <ion-content fullscreen>
+        <ion-content>
           <ion-list>
             <ion-list-header>
               Recent Conversations

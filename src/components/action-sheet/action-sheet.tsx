@@ -32,12 +32,12 @@ export class PageActionSheet {
   render() {
     return (
       <ion-app>
-        <ion-header translucent>
+        <ion-header>
           <ion-toolbar>
             <ion-title>Action Sheet</ion-title>
           </ion-toolbar>
         </ion-header>
-        <ion-content fullscreen padding>
+        <ion-content padding>
           <ion-action-sheet-controller ref={node => { this.controller = node; }}/>
           <ion-button expand="block" onClick={this.showActionSheet}>Show Action Sheet</ion-button>
         </ion-content>

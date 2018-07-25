@@ -8,12 +8,12 @@ export class PageGrid {
   render() {
     return (
       <ion-app>
-        <ion-header translucent>
+        <ion-header>
           <ion-toolbar>
             <ion-title>Grid</ion-title>
           </ion-toolbar>
         </ion-header>
-        <ion-content fullscreen>
+        <ion-content>
           <ion-grid>
             <ion-row>
               <ion-col><div>1 of 2</div></ion-col>

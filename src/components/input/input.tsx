@@ -36,13 +36,13 @@ export class PageInput {
   render() {
     return (
       <ion-app>
-        <ion-header translucent>
+        <ion-header>
           <ion-toolbar>
             <ion-title>Input</ion-title>
           </ion-toolbar>
         </ion-header>
 
-        <ion-content fullscreen padding>
+        <ion-content padding>
           <form onSubmit={(event) => this.processForm(event)}>
             <ion-list>
 

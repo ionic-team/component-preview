@@ -30,13 +30,13 @@ export class PageInfiniteScroll {
   render() {
     return (
       <ion-app>
-        <ion-header translucent>
+        <ion-header>
           <ion-toolbar>
             <ion-title>Infinite Scroll</ion-title>
           </ion-toolbar>
         </ion-header>
 
-        <ion-content fullscreen>
+        <ion-content>
           <app-list items={this.items}></app-list>
 
           <ion-infinite-scroll onIonInfinite={(event) => this.doInfinite(event)}>

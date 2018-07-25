@@ -9,7 +9,7 @@ export class HomePage {
   render() {
     return (
       <ion-app>
-        <ion-header translucent>
+        <ion-header>
           <ion-toolbar>
             <ion-buttons slot="start">
               <ion-menu-button></ion-menu-button>
@@ -18,7 +18,7 @@ export class HomePage {
           </ion-toolbar>
         </ion-header>
 
-        <ion-content fullscreen padding>
+        <ion-content padding>
           <h1>Welcome to the home page</h1>
         </ion-content>
       </ion-app>

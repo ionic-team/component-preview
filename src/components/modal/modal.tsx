@@ -19,13 +19,13 @@ export class modal {
   render() {
     return (
       <ion-app>
-        <ion-header translucent>
+        <ion-header>
           <ion-toolbar>
             <ion-title>Modal</ion-title>
           </ion-toolbar>
         </ion-header>
 
-        <ion-content fullscreen padding>
+        <ion-content padding>
           <ion-list>
             <ion-list-header>
               Hobbits

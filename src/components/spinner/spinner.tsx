@@ -10,13 +10,13 @@ export class PageSpinner {
   render() {
     return (
       <ion-app>
-        <ion-header translucent>
+        <ion-header>
           <ion-toolbar>
             <ion-title>Spinner</ion-title>
           </ion-toolbar>
         </ion-header>
 
-        <ion-content fullscreen>
+        <ion-content>
           <div id='centerBlock'>
             <ion-spinner></ion-spinner>
             <ion-spinner color='primary'></ion-spinner>

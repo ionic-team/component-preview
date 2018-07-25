@@ -19,13 +19,13 @@ export class PageRefresher {
   render() {
     return (
       <ion-app>
-        <ion-header translucent>
+        <ion-header>
           <ion-toolbar>
             <ion-title>Refresher</ion-title>
           </ion-toolbar>
         </ion-header>
-        <ion-content fullscreen>
-          <ion-refresher id="refresher" disabled={false} slot="fixed" onIonRefresh={event => this.doRefresh(event)}>
+        <ion-content>
+          <ion-refresher id="refresher" disabled="false" slot="fixed" onIonRefresh={event => this.doRefresh(event)}>
             <ion-refresher-content pulling-text="Pull to refresh..." refreshing-spinner="bubbles" refreshing-text="Refreshing...">
             </ion-refresher-content>
           </ion-refresher>

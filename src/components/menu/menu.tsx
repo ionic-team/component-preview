@@ -34,12 +34,12 @@ export class PageMenu {
         {this.renderRouter()}
         <ion-split-pane>
           <ion-menu>
-            <ion-header translucent>
+            <ion-header>
               <ion-toolbar>
                 <ion-title>Menu</ion-title>
               </ion-toolbar>
             </ion-header>
-            <ion-content fullscreen forceOverscroll={false}>
+            <ion-content forceOverscroll={false}>
               <ion-list>
                 <ion-list-header>
                   Navigate

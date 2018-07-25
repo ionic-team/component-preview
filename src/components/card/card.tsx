@@ -8,12 +8,12 @@ export class PageCard {
   render() {
     return (
       <ion-app>
-        <ion-header translucent>
+        <ion-header>
           <ion-toolbar>
             <ion-title>Card</ion-title>
           </ion-toolbar>
         </ion-header>
-        <ion-content fullscreen>
+        <ion-content>
           <ion-card>
             <img src="./assets/madison.jpg"/>
             <ion-card-header>

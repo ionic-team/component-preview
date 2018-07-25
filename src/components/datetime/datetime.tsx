@@ -8,12 +8,12 @@ export class PageDatetime {
   render() {
     return (
       <ion-app>
-        <ion-header translucent>
+        <ion-header>
           <ion-toolbar>
             <ion-title>DateTime</ion-title>
           </ion-toolbar>
         </ion-header>
-        <ion-content fullscreen>
+        <ion-content>
           <ion-list>
             <ion-item>
               <ion-input placeholder="Title"/>
