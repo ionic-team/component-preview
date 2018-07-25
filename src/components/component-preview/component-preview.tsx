@@ -22,82 +22,82 @@ export class ComponentPreview {
   render() {
     switch (this.active) {
       case 'action-sheet':
-        return <page-action-sheet/>;
+        return <page-action-sheet></page-action-sheet>;
 
       case 'alert':
-        return <page-alert/>;
+        return <page-alert></page-alert>;
 
       case 'badge':
-        return <page-badge/>;
+        return <page-badge></page-badge>;
 
       case 'button':
-        return <page-button/>;
+        return <page-button></page-button>;
 
       case 'card':
-        return <page-card/>;
+        return <page-card></page-card>;
 
       case 'checkbox':
-        return <page-checkbox/>;
+        return <page-checkbox></page-checkbox>;
 
       case 'datetime':
-        return <page-datetime/>;
+        return <page-datetime></page-datetime>;
 
       case 'fab':
-        return <page-fab/>;
+        return <page-fab></page-fab>;
 
       case 'grid':
-        return <page-grid/>;
+        return <page-grid></page-grid>;
 
       case 'infinite-scroll':
-        return <page-infinite-scroll/>;
+        return <page-infinite-scroll></page-infinite-scroll>;
 
       case 'input':
-        return <page-input/>;
+        return <page-input></page-input>;
 
       case 'list':
-        return <page-list/>;
+        return <page-list></page-list>;
 
       case 'loading':
-        return <page-loading/>;
+        return <page-loading></page-loading>;
 
       case 'menu':
-        return <page-menu/>;
+        return <page-menu></page-menu>;
 
       case 'modal':
-        return <page-modal/>;
+        return <page-modal></page-modal>;
 
       case 'nav':
-        return <page-nav />;
+        return <page-nav ></page-nav >;
 
       case 'popover':
-        return <page-popover />
+        return <page-popover></page-popover>;
 
       case 'radio':
         return <div>Radio</div>;
 
       case 'range':
-        return <page-range/>;
+        return <page-range></page-range>;
 
       case 'refresher':
-        return <page-refresher/>;
+        return <page-refresher></page-refresher>;
 
       case 'searchbar':
-        return <page-searchbar/>;
+        return <page-searchbar></page-searchbar>;
 
       case 'select':
-        return <page-select/>;
+        return <page-select></page-select>;
 
       case 'slides':
-        return <page-slides/>;
+        return <page-slides></page-slides>;
 
       case 'spinner':
-        return <page-spinner/>;
+        return <page-spinner></page-spinner>;
 
       case 'tabs':
-        return <page-tabs/>;
+        return <page-tabs></page-tabs>;
 
       case 'toast':
-        return <page-toast/>;
+        return <page-toast></page-toast>;
 
       case 'toggle':
         return <div>Toggle</div>;
