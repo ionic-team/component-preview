@@ -18,3 +18,7 @@ http://localhost:3333/#nav
 ```
 
 You may have to refresh the page to see the demo.
+
+## Issues
+
+Please open issues in the [Ionic Docs repo](https://github.com/ionic-team/ionic-docs/issues).
