@@ -10,3 +10,7 @@
 
 /** Optional CSS utils that can be commented out */
 @import "~@ionic/core/css/padding.css";
+
+ion-toolbar {
+  --background: white;
+}
