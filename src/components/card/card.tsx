@@ -14,7 +14,7 @@ export class PageCard {
       </ion-header>,
       <ion-content fullscreen>
         <ion-card>
-          <img src="./assets/madison.jpg"/>
+          <img src="./assets/madison.jpg" />
           <ion-card-header>
             <ion-card-subtitle>Destination</ion-card-subtitle>
             <ion-card-title>Madison, WI</ion-card-title>

@@ -121,7 +121,7 @@ export class ComponentPreview {
           left: '50%',
           transform : 'translate(-50%, -50%)',
           fontSize: '6em'
-        }}/>
+        }}></ion-icon>
       </ion-content>
     );
   }

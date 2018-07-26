@@ -14,12 +14,12 @@ export class PageDatetime {
       <ion-content fullscreen>
         <ion-list>
           <ion-item>
-            <ion-input placeholder="Title"/>
+            <ion-input placeholder="Title"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-input placeholder="Location"/>
+            <ion-input placeholder="Location"></ion-input>
           </ion-item>
-          <ion-item-divider/>
+          <ion-item-divider></ion-item-divider>
           <ion-item>
             <ion-label>Start Date</ion-label>
             <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
@@ -40,7 +40,7 @@ export class PageDatetime {
             <ion-label>Travel Time</ion-label>
             <ion-datetime placeholder="None" disabled></ion-datetime>
           </ion-item>
-          <ion-item-divider/>
+          <ion-item-divider></ion-item-divider>
           <ion-item>
             <ion-label>Alert</ion-label>
             <ion-datetime placeholder="None" disabled></ion-datetime>
