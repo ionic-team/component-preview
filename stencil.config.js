@@ -12,7 +12,11 @@ exports.config = {
       type: 'www',
       baseUrl: '/docs/content/component-preview-app/docs-www',
       serviceWorker: false,
-      dir: 'docs-www'
+      dir: 'docs-www',
+
+      // workaround, global CSS styles URL is wrong
+      inlineStyles: true,
+      inlineAssetsMaxSize: 30000
     }
   ]
 };
