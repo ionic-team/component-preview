@@ -24,82 +24,82 @@ export class ComponentPreview {
   private renderPage() {
     switch (this.active) {
       case 'action-sheet':
-        return <page-action-sheet></page-action-sheet>;
+        return <page-action-sheet class="ion-page"></page-action-sheet>;
 
       case 'alert':
-        return <page-alert></page-alert>;
+        return <page-alert class="ion-page"></page-alert>;
 
       case 'badge':
-        return <page-badge></page-badge>;
+        return <page-badge class="ion-page"></page-badge>;
 
       case 'button':
-        return <page-button></page-button>;
+        return <page-button class="ion-page"></page-button>;
 
       case 'card':
-        return <page-card></page-card>;
+        return <page-card class="ion-page"></page-card>;
 
       case 'checkbox':
-        return <page-checkbox></page-checkbox>;
+        return <page-checkbox class="ion-page"></page-checkbox>;
 
       case 'datetime':
-        return <page-datetime></page-datetime>;
+        return <page-datetime class="ion-page"></page-datetime>;
 
       case 'fab':
-        return <page-fab></page-fab>;
+        return <page-fab class="ion-page"></page-fab>;
 
       case 'grid':
-        return <page-grid></page-grid>;
+        return <page-grid class="ion-page"></page-grid>;
 
       case 'infinite-scroll':
-        return <page-infinite-scroll></page-infinite-scroll>;
+        return <page-infinite-scroll class="ion-page"></page-infinite-scroll>;
 
       case 'input':
-        return <page-input></page-input>;
+        return <page-input class="ion-page"></page-input>;
 
       case 'list':
-        return <page-list></page-list>;
+        return <page-list class="ion-page"></page-list>;
 
       case 'loading':
-        return <page-loading></page-loading>;
+        return <page-loading class="ion-page"></page-loading>;
 
       case 'menu':
-        return <page-menu></page-menu>;
+        return <page-menu class="ion-page"></page-menu>;
 
       case 'modal':
-        return <page-modal></page-modal>;
+        return <page-modal class="ion-page"></page-modal>;
 
       case 'nav':
-        return <page-nav></page-nav >;
+        return <page-nav class="ion-page"></page-nav >;
 
       case 'popover':
-        return <page-popover></page-popover>;
+        return <page-popover class="ion-page"></page-popover>;
 
       case 'range':
-        return <page-range></page-range>;
+        return <page-range class="ion-page"></page-range>;
 
       case 'refresher':
-        return <page-refresher></page-refresher>;
+        return <page-refresher class="ion-page"></page-refresher>;
 
       case 'searchbar':
-        return <page-searchbar></page-searchbar>;
+        return <page-searchbar class="ion-page"></page-searchbar>;
 
       case 'select':
-        return <page-select></page-select>;
+        return <page-select class="ion-page"></page-select>;
 
       case 'slides':
-        return <page-slides></page-slides>;
+        return <page-slides class="ion-page"></page-slides>;
 
       case 'spinner':
-        return <page-spinner></page-spinner>;
+        return <page-spinner class="ion-page"></page-spinner>;
 
       case 'tabs':
-        return <page-tabs></page-tabs>;
+        return <page-tabs class="ion-page"></page-tabs>;
 
       case 'toast':
-        return <page-toast></page-toast>;
+        return <page-toast class="ion-page"></page-toast>;
 
       case 'virtual-scroll':
-        return <page-virtual-scroll></page-virtual-scroll>;
+        return <page-virtual-scroll class="ion-page"></page-virtual-scroll>;
 
       default:
         return this.renderDefault();
