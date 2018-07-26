@@ -74,9 +74,6 @@ export class ComponentPreview {
       case 'popover':
         return <page-popover></page-popover>;
 
-      case 'radio':
-        return <div>Radio</div>;
-
       case 'range':
         return <page-range></page-range>;
 
@@ -100,9 +97,6 @@ export class ComponentPreview {
 
       case 'toast':
         return <page-toast></page-toast>;
-
-      case 'toggle':
-        return <div>Toggle</div>;
 
       case 'virtual-scroll':
         return <page-virtual-scroll></page-virtual-scroll>;
