@@ -14,6 +14,7 @@ export class PageLoading {
       duration: 3000,
       dismissOnPageChange: true
     });
+
     loading.present();
   }
 

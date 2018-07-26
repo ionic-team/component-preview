@@ -1,31 +1,30 @@
-import { Component } from '@stencil/core';
+import { Component, Prop } from '@stencil/core';
 
 @Component({
   tag: 'page-action-sheet'
 })
 export class PageActionSheet {
-  controller: any;
+  @Prop({ connect: 'ion-action-sheet-controller '}) actionSheetCtrl: any;
 
-  showActionSheet = () => {
-    if (this.controller) {
-      this.controller.create({
-        header: 'Albums',
-        buttons: [{
-          text: 'Delete',
-          role: 'destructive'
-        }, {
-          text: 'Share'
-        }, {
-          text: 'Play'
-        }, {
-          text: 'Favorite'
-        }, {
-          text: 'Cancel',
-          role: 'cancel'
-        }]
-      })
-      .then(actionSheet => actionSheet.present());
-    }
+  async showActionSheet() {
+    const actionSheet = await this.actionSheetCtrl.create({
+      header: 'Albums',
+      buttons: [{
+        text: 'Delete',
+        role: 'destructive'
+      }, {
+        text: 'Share'
+      }, {
+        text: 'Play'
+      }, {
+        text: 'Favorite'
+      }, {
+        text: 'Cancel',
+        role: 'cancel'
+      }]
+    });
+
+    actionSheet.present();
   }
 
   render() {
@@ -36,8 +35,9 @@ export class PageActionSheet {
         </ion-toolbar>
       </ion-header>,
       <ion-content fullscreen padding>
-        <ion-action-sheet-controller ref={node => { this.controller = node; }}/>
-        <ion-button expand="block" onClick={this.showActionSheet}>Show Action Sheet</ion-button>
+        <ion-action-sheet-controller></ion-action-sheet-controller>
+
+        <ion-button expand="block" onClick={() => this.showActionSheet()}>Show Action Sheet</ion-button>
       </ion-content>
     ];
   }

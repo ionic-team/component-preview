@@ -13,14 +13,15 @@ export class PageInput {
   async processForm(ev) {
     ev.preventDefault();
 
-    let alert = await this.alertCtrl.create({
+    const alert = await this.alertCtrl.create({
       header: "Account Created",
       message: `Created Account for: ${this.firstName} ${this.lastName}`,
       buttons: [{
         text: 'Ok',
       }]
     });
-    alert.present()
+
+    alert.present();
   }
 
   handleFirstNameValue(ev) {
@@ -30,7 +31,6 @@ export class PageInput {
   handleLastNameValue(ev) {
     this.lastName = ev.target.value;
   }
-
 
   render() {
     return [
@@ -43,7 +43,6 @@ export class PageInput {
       <ion-content fullscreen padding>
         <form onSubmit={(event) => this.processForm(event)}>
           <ion-list>
-
             <ion-item>
               <ion-input required onInput={(event) => this.handleFirstNameValue(event)} value={this.firstName} type="text" placeholder="First Name"></ion-input>
             </ion-item>
@@ -51,7 +50,6 @@ export class PageInput {
             <ion-item>
               <ion-input required onInput={(event) => this.handleLastNameValue(event)} value={this.lastName} type="text" placeholder="Last Name"></ion-input>
             </ion-item>
-
           </ion-list>
 
           <div>

@@ -12,6 +12,7 @@ export class modal {
       component: 'modal-page',
       componentProps: { char }
     });
+
     modal.present();
   }
 

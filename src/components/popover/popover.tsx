@@ -6,13 +6,13 @@ import { Component, Element, Prop } from '@stencil/core';
   styleUrl: 'popover.css'
 })
 export class PagePopover {
+  contentEl: HTMLElement;
 
   @Prop({ connect: 'ion-popover-controller' }) popoverCtrl;
-  contentEl: HTMLElement;
 
   @Element() el: HTMLElement;
 
-  openPopover = async function(event) {
+  async openPopover(event) {
     const popover = await this.popoverCtrl.create({
       component: 'popover-page',
       componentProps: {
@@ -22,7 +22,7 @@ export class PagePopover {
       ev: event
     });
 
-    await popover.present();
+    popover.present();
   }
 
   render() {
