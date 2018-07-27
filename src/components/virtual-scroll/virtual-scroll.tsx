@@ -8,7 +8,7 @@ import { Component, Element } from '@stencil/core';
 export class PageVirtualScroll {
 
   @Element() el: HTMLElement;
-  virtualEl: any;
+  virtualEl: HTMLIonVirtualScrollElement;
 
   componentDidLoad() {
     const items = Array.from({ length: 500 }, (x, i) => {
@@ -49,7 +49,7 @@ export class PageVirtualScroll {
       </ion-header>,
 
       <ion-content fullscreen>
-        <ion-virtual-scroll ref={el => this.virtualEl = el}></ion-virtual-scroll>
+        <ion-virtual-scroll ref={el => this.virtualEl = el as HTMLIonVirtualScrollElement}></ion-virtual-scroll>
       </ion-content>
     ];
   }

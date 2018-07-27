@@ -4,7 +4,7 @@ import { Component, Prop } from '@stencil/core';
   tag: 'page-action-sheet'
 })
 export class PageActionSheet {
-  @Prop({ connect: 'ion-action-sheet-controller '}) actionSheetCtrl: any;
+  @Prop({ connect: 'ion-action-sheet-controller '}) actionSheetCtrl: HTMLIonActionSheetControllerElement;
 
   async showActionSheet() {
     const actionSheet = await this.actionSheetCtrl.create({

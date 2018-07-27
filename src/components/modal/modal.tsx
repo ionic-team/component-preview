@@ -5,7 +5,7 @@ import { Component, Prop } from '@stencil/core';
   tag: 'page-modal'
 })
 export class modal {
-  @Prop({ connect: 'ion-modal-controller' }) modalCtrl: any;
+  @Prop({ connect: 'ion-modal-controller' }) modalCtrl: HTMLIonModalControllerElement;
 
   async openModal(char: number) {
     const modal = await this.modalCtrl.create({

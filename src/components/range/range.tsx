@@ -10,7 +10,7 @@ export class PageRange {
   @State() brightness: number = 20;
   @State() contrast: number = 0;
   @State() warmth: number = 1300;
-  @State() structure: any = { lower: 33, upper: 60 };
+  @State() structure = { lower: 33, upper: 60 };
 
   render() {
     return [

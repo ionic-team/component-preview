@@ -8,7 +8,7 @@ export class PageNav {
 
   @Element() el: HTMLElement;
 
-  @State() techStacks: any[] = [
+  @State() techStacks = [
     {
       'title': 'Angular',
       'icon': 'angular',
