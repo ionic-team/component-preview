@@ -1,4 +1,4 @@
-import { Component, Prop } from '@stencil/core';
+import { Component, Prop, State } from '@stencil/core';
 
 
 @Component({
@@ -7,10 +7,9 @@ import { Component, Prop } from '@stencil/core';
 })
 export class PopoverPage {
 
-  @Prop() contentEle: HTMLElement;
-  @Prop() textEle: any;
+  @Prop() contentEl: HTMLElement;
 
-  background: string;
+  @State() selected: string;
 
   colors = {
     'white': {
@@ -31,20 +30,27 @@ export class PopoverPage {
     },
   };
 
-  changeBackground(color) {
-    this.background = color;
-    this.contentEle.style.backgroundColor = this.colors[color].bg;
-    this.textEle.style.color = this.colors[color].fg;
+  changeColor(color) {
+    this.selected = color;
+    this.contentEl.style.background = this.colors[color].bg;
+    this.contentEl.style.color = this.colors[color].fg;
   }
 
   changeFontSize(direction) {
-    this.textEle.style.fontSize = direction;
+    const currentSize = parseInt(this.contentEl.style.fontSize);
+    const newSize = direction === 'smaller' ? (currentSize * .9) : (currentSize * 1.1);
+
+    // Prevent the user from making it too small or large
+    if (newSize < 50 || newSize > 480) {
+      return;
+    }
+
+    this.contentEl.style.fontSize = newSize + '%';
   }
 
-  changeFontFamily(family) {
-    this.textEle.forEach(text => {
-      text.style.fontFamily = family;
-    });
+  changeFontFamily(event) {
+    const family = event.detail.value;
+    this.contentEl.style.fontFamily = family;
   }
 
   render() {
@@ -53,56 +59,50 @@ export class PopoverPage {
         <ion-grid>
           <ion-row>
             <ion-col>
-              <ion-item onClick={() => this.changeFontSize('smaller')} detail-none class="text-button text-smaller">A</ion-item>
+              <ion-item button onClick={() => this.changeFontSize('smaller')} detail={false} class="text-button text-smaller">A</ion-item>
             </ion-col>
             <ion-col>
-              <ion-item onClick={() => this.changeFontSize('larger')} detail-none class="text-button text-larger">A</ion-item>
+              <ion-item button onClick={() => this.changeFontSize('larger')} detail={false} class="text-button text-larger">A</ion-item>
             </ion-col>
           </ion-row>
           <ion-row class="row-dots">
             <ion-col>
-              <div onClick={() => this.changeBackground('white')} class="dot dot-white"></div>
+              <div onClick={() => this.changeColor('white')} class={{'dot': true, 'dot-white': true, 'selected': this.selected === 'white'}}></div>
             </ion-col>
             <ion-col>
-              <div onClick={() => this.changeBackground('tan')} class="dot dot-tan"></div>
+              <div onClick={() => this.changeColor('tan')} class={{'dot': true, 'dot-tan': true, 'selected': this.selected === 'tan'}}></div>
             </ion-col>
             <ion-col>
-              <div onClick={() => this.changeBackground('grey')} class="dot dot-grey"></div>
+              <div onClick={() => this.changeColor('grey')} class={{'dot': true, 'dot-grey': true, 'selected': this.selected === 'grey'}}></div>
             </ion-col>
             <ion-col>
-              <div onClick={() => this.changeBackground('black')} class="dot dot-black"></div>
+              <div onClick={() => this.changeColor('black')} class={{'dot': true, 'dot-black': true, 'selected': this.selected === 'black'}}></div>
             </ion-col>
           </ion-row>
         </ion-grid>
 
-        <ion-item class="text-athelas">
-          <ion-label>Athelas</ion-label>
-          <ion-radio onIonSelect={() => this.changeFontFamily('Athelas')} value="Athelas"></ion-radio>
-        </ion-item>
-        <ion-item class="text-charter">
-          <ion-label>Charter</ion-label>
-          <ion-radio onIonSelect={() => this.changeFontFamily('Charter')} value="Charter"></ion-radio>
-        </ion-item>
-        <ion-item class="text-iowan">
-          <ion-label>Iowan</ion-label>
-          <ion-radio onIonSelect={() => this.changeFontFamily('Iowan')} value="Iowan"></ion-radio>
-        </ion-item>
-        <ion-item class="text-palatino">
-          <ion-label>Palatino</ion-label>
-          <ion-radio onIonSelect={() => this.changeFontFamily('Palatino')} value="Palatino"></ion-radio>
-        </ion-item>
-        <ion-item class="text-san-francisco">
-          <ion-label>San Francisco</ion-label>
-          <ion-radio onIonSelect={() => this.changeFontFamily('San Francisco')} value="San Francisco"></ion-radio>
-        </ion-item>
-        <ion-item class="text-seravek">
-          <ion-label>Seravek</ion-label>
-          <ion-radio onIonSelect={() => this.changeFontFamily('Seravek')} value="Seravek"></ion-radio>
-        </ion-item>
-        <ion-item class="text-times-new-roman">
-          <ion-label>Times New Roman</ion-label>
-          <ion-radio onIonSelect={() => this.changeFontFamily('Times New Roman')} value="Times New Roman"></ion-radio>
-        </ion-item>
+        <ion-radio-group name="font-family" onIonChange={() => this.changeFontFamily(event)}>
+          <ion-item class="text-arial">
+            <ion-label>Arial</ion-label>
+            <ion-radio value="Arial"></ion-radio>
+          </ion-item>
+          <ion-item class="text-courier-new">
+            <ion-label>Courier New</ion-label>
+            <ion-radio value="Courier New"></ion-radio>
+          </ion-item>
+          <ion-item class="text-trebuchet">
+            <ion-label>Trebuchet</ion-label>
+            <ion-radio value="Trebuchet MS"></ion-radio>
+          </ion-item>
+          <ion-item class="text-comic-sans">
+            <ion-label>Comic Sans</ion-label>
+            <ion-radio value="Comic Sans MS"></ion-radio>
+          </ion-item>
+          <ion-item class="text-times-new-roman">
+            <ion-label>Times New Roman</ion-label>
+            <ion-radio value="Times New Roman"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
       </ion-list>
     );
   }

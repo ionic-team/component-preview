@@ -792,8 +792,7 @@ declare global {
 
   namespace StencilComponents {
     interface PopoverPage {
-      'contentEle': HTMLElement;
-      'textEle': any;
+      'contentEl': HTMLElement;
     }
   }
 
@@ -816,8 +815,7 @@ declare global {
   }
   namespace JSXElements {
     export interface PopoverPageAttributes extends HTMLAttributes {
-      'contentEle'?: HTMLElement;
-      'textEle'?: any;
+      'contentEl'?: HTMLElement;
     }
   }
 }
