@@ -12,6 +12,7 @@ export class ComponentPreview {
   handleMessage({ data }: MessageEvent) {
     if (data.active) {
       this.active = data.active;
+      window.location.hash = data.active;
     }
   }
 
