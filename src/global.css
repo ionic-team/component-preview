@@ -14,3 +14,7 @@
 ion-toolbar {
   --background: white;
 }
+
+:root {
+  --ion-statusbar-padding: 20px;
+}
