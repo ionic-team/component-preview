@@ -1,6 +1,5 @@
 import { Component, Element } from '@stencil/core';
 
-
 @Component({
   tag: 'page-virtual-scroll',
   styleUrl: 'virtual-scroll.css'
@@ -20,10 +19,10 @@ export class PageVirtualScroll {
     this.virtualEl.headerFn = (item, index) => {
       console.log(item, index);
       return null;
-    }
+    };
 
     this.virtualEl.nodeRender = (el, cell) => {
-      if (cell.type === 0) return this.renderItem(el, cell.value);
+      if (cell.type === 0) { return this.renderItem(el, cell.value); }
     };
     this.virtualEl.items = items;
   }

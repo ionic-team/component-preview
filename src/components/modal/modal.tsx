@@ -1,10 +1,9 @@
 import { Component, Prop } from '@stencil/core';
 
-
 @Component({
   tag: 'page-modal'
 })
-export class modal {
+export class Modal {
   @Prop({ connect: 'ion-modal-controller' }) modalCtrl: HTMLIonModalControllerElement;
 
   async openModal(char: number) {

@@ -11,7 +11,8 @@ const APP_PAGES: AppPage[] = [
     title: 'Home',
     component: 'home-page',
     icon: 'home'
-  }, {
+  },
+  {
     title: 'Profile',
     component: 'profile-page',
     icon: 'person'
@@ -43,7 +44,7 @@ export class PageMenu {
               Navigate
           </ion-list-header>
 
-            {APP_PAGES.map((p) =>
+            {APP_PAGES.map(p =>
               <ion-menu-toggle autoHide={false}>
                 <ion-item tappable onClick={() => this.onMenuClick(p)}>
                   <ion-icon slot="start" name={p.icon}></ion-icon>

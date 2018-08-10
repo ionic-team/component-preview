@@ -4,24 +4,18 @@ import { Component, Prop } from '@stencil/core';
   tag: 'page-action-sheet'
 })
 export class PageActionSheet {
-  @Prop({ connect: 'ion-action-sheet-controller '}) actionSheetCtrl: HTMLIonActionSheetControllerElement;
+  @Prop({ connect: 'ion-action-sheet-controller ' }) actionSheetCtrl: HTMLIonActionSheetControllerElement;
 
   async showActionSheet() {
     const actionSheet = await this.actionSheetCtrl.create({
       header: 'Albums',
-      buttons: [{
-        text: 'Delete',
-        role: 'destructive'
-      }, {
-        text: 'Share'
-      }, {
-        text: 'Play'
-      }, {
-        text: 'Favorite'
-      }, {
-        text: 'Cancel',
-        role: 'cancel'
-      }]
+      buttons: [
+        { text: 'Delete', role: 'destructive' },
+        { text: 'Share' },
+        { text: 'Play' },
+        { text: 'Favorite' },
+        { text: 'Cancel', role: 'cancel' }
+      ]
     });
 
     actionSheet.present();

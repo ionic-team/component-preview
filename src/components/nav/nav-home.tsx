@@ -1,6 +1,5 @@
 import { Component, Element, State } from '@stencil/core';
 
-
 @Component({
   tag: 'nav-home'
 })
@@ -80,15 +79,15 @@ export class PageNav {
       <ion-content fullscreen>
         <ion-list>
           {
-            this.techStacks.map((tech) => {
+            this.techStacks.map(tech => {
               return (
                 <ion-item onClick={() => this.navToDetail(tech)}>
-                  <ion-icon slot='start' name={`logo-${tech.icon}`} style={{ 'color': `${tech.color}` }}></ion-icon>
+                  <ion-icon slot="start" name={`logo-${tech.icon}`} style={{ 'color': `${tech.color}` }}></ion-icon>
                   <ion-label>
                     <h3>{tech.title}</h3>
                   </ion-label>
                 </ion-item>
-              )
+              );
             })
           }
         </ion-list>

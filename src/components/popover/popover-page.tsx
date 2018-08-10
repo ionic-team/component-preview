@@ -1,6 +1,5 @@
 import { Component, Prop, State } from '@stencil/core';
 
-
 @Component({
   tag: 'popover-page',
   styleUrl: 'popover-page.css'
@@ -37,7 +36,7 @@ export class PopoverPage {
   }
 
   changeFontSize(direction) {
-    const currentSize = parseInt(this.contentEl.style.fontSize);
+    const currentSize = parseInt(this.contentEl.style.fontSize, 10);
     const newSize = direction === 'smaller' ? (currentSize * .9) : (currentSize * 1.1);
 
     // Prevent the user from making it too small or large
@@ -55,7 +54,7 @@ export class PopoverPage {
 
   render() {
     return (
-      <ion-list lines='full'>
+      <ion-list lines="full">
         <ion-grid>
           <ion-row>
             <ion-col>
@@ -67,16 +66,16 @@ export class PopoverPage {
           </ion-row>
           <ion-row class="row-dots">
             <ion-col>
-              <div onClick={() => this.changeColor('white')} class={{'dot': true, 'dot-white': true, 'selected': this.selected === 'white'}}></div>
+              <div onClick={() => this.changeColor('white')} class={{ 'dot': true, 'dot-white': true, 'selected': this.selected === 'white' }}></div>
             </ion-col>
             <ion-col>
-              <div onClick={() => this.changeColor('tan')} class={{'dot': true, 'dot-tan': true, 'selected': this.selected === 'tan'}}></div>
+              <div onClick={() => this.changeColor('tan')} class={{ 'dot': true, 'dot-tan': true, 'selected': this.selected === 'tan' }}></div>
             </ion-col>
             <ion-col>
-              <div onClick={() => this.changeColor('grey')} class={{'dot': true, 'dot-grey': true, 'selected': this.selected === 'grey'}}></div>
+              <div onClick={() => this.changeColor('grey')} class={{ 'dot': true, 'dot-grey': true, 'selected': this.selected === 'grey' }}></div>
             </ion-col>
             <ion-col>
-              <div onClick={() => this.changeColor('black')} class={{'dot': true, 'dot-black': true, 'selected': this.selected === 'black'}}></div>
+              <div onClick={() => this.changeColor('black')} class={{ 'dot': true, 'dot-black': true, 'selected': this.selected === 'black' }}></div>
             </ion-col>
           </ion-row>
         </ion-grid>

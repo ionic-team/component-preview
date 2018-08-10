@@ -1,19 +1,18 @@
 import { Component, Prop } from '@stencil/core';
 
-
 @Component({
   tag: 'page-toast',
   styleUrl: 'toast.css'
 })
 export class PageToast {
 
-  @Prop({ connect: 'ion-toast-controller '}) toastCtrl: HTMLIonToastControllerElement;
+  @Prop({ connect: 'ion-toast-controller ' }) toastCtrl: HTMLIonToastControllerElement;
 
   async showToast(position: string) {
     const toast = await this.toastCtrl.create({
       message: 'Mmmm, buttered toast',
       duration: 2000,
-      position: position
+      position
     });
 
     toast.present();
@@ -49,11 +48,11 @@ export class PageToast {
       <ion-content fullscreen padding>
         <ion-toast-controller></ion-toast-controller>
 
-        <ion-button expand='block' onClick={() => this.showToast('top')}>Show Toast Top Position</ion-button>
-        <ion-button expand='block' onClick={() => this.showToast('middle')}>Show Toast Middle Position</ion-button>
-        <ion-button expand='block' onClick={() => this.showToast('bottom')}>Show Toast Bottom Position</ion-button>
-        <ion-button expand='block' onClick={() => this.showLongToast()}>Show Long Toast</ion-button>
-        <ion-button expand='block' onClick={() => this.showToastWithCloseButton()}>Show Toast W/ Close ion-button</ion-button>
+        <ion-button expand="block" onClick={() => this.showToast('top')}>Show Toast Top Position</ion-button>
+        <ion-button expand="block" onClick={() => this.showToast('middle')}>Show Toast Middle Position</ion-button>
+        <ion-button expand="block" onClick={() => this.showToast('bottom')}>Show Toast Bottom Position</ion-button>
+        <ion-button expand="block" onClick={() => this.showLongToast()}>Show Long Toast</ion-button>
+        <ion-button expand="block" onClick={() => this.showToastWithCloseButton()}>Show Toast W/ Close ion-button</ion-button>
       </ion-content>
     ];
   }

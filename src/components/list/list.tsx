@@ -1,6 +1,5 @@
 import { Component } from '@stencil/core';
 
-
 @Component({
   tag: 'page-list'
 })
@@ -21,7 +20,7 @@ export class PageList {
           </ion-list-header>
 
           <ion-item>
-            <ion-avatar slot='start'>
+            <ion-avatar slot="start">
               <img src="assets/img/avatar-finn.png"></img>
             </ion-avatar>
             <ion-label>
@@ -32,7 +31,7 @@ export class PageList {
           </ion-item>
 
           <ion-item>
-            <ion-avatar slot='start'>
+            <ion-avatar slot="start">
               <img src="assets/img/avatar-han.png"></img>
             </ion-avatar>
             <ion-label>
@@ -43,7 +42,7 @@ export class PageList {
           </ion-item>
 
           <ion-item>
-            <ion-avatar slot='start'>
+            <ion-avatar slot="start">
               <img src="assets/img/avatar-rey.png"></img>
             </ion-avatar>
             <ion-label>
@@ -54,7 +53,7 @@ export class PageList {
           </ion-item>
 
           <ion-item>
-            <ion-avatar slot='start'>
+            <ion-avatar slot="start">
               <img src="assets/img/avatar-luke.png"></img>
             </ion-avatar>
             <ion-label>
@@ -71,7 +70,7 @@ export class PageList {
           </ion-list-header>
 
           <ion-item>
-            <ion-avatar slot='start'>
+            <ion-avatar slot="start">
               <img src="assets/img/avatar-poe.png"></img>
             </ion-avatar>
             <ion-label>
@@ -82,7 +81,7 @@ export class PageList {
           </ion-item>
 
           <ion-item>
-            <ion-avatar slot='start'>
+            <ion-avatar slot="start">
               <img src="assets/img/avatar-ben.png"></img>
             </ion-avatar>
             <ion-label>
@@ -93,7 +92,7 @@ export class PageList {
           </ion-item>
 
           <ion-item>
-            <ion-avatar slot='start'>
+            <ion-avatar slot="start">
               <img src="assets/img/avatar-leia.png"></img>
             </ion-avatar>
             <ion-label>
@@ -104,7 +103,7 @@ export class PageList {
           </ion-item>
 
           <ion-item>
-            <ion-avatar slot='start'>
+            <ion-avatar slot="start">
               <img src="assets/img/avatar-yoda.png"></img>
             </ion-avatar>
             <ion-label>

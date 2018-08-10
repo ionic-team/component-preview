@@ -1,6 +1,5 @@
 import { Component, Element, Prop, State } from '@stencil/core';
 
-
 @Component({
   tag: 'modal-page'
 })
@@ -73,7 +72,7 @@ export class ModalPage {
       <ion-content fullscreen>
         <ion-list>
           <ion-item>
-            <ion-avatar slot='start'>
+            <ion-avatar slot="start">
               <img src={this.character.image}></img>
             </ion-avatar>
             <ion-label>
@@ -82,17 +81,17 @@ export class ModalPage {
             </ion-label>
           </ion-item>
           {
-            this.character.items.map((item) => {
+            this.character.items.map(item => {
               return (
                 <ion-item>
                   <ion-label>
                     <h2>{item.title}</h2>
                   </ion-label>
-                  <ion-note slot='end'>
+                  <ion-note slot="end">
                     {item.note}
                   </ion-note>
                 </ion-item>
-              )
+              );
             })
           }
         </ion-list>

@@ -4,7 +4,7 @@ import { Component, Prop } from '@stencil/core';
   tag: 'page-alert'
 })
 export class PageAlert {
-  @Prop({ connect: 'ion-alert-controller '}) alertCtrl: HTMLIonAlertControllerElement;
+  @Prop({ connect: 'ion-alert-controller ' }) alertCtrl: HTMLIonAlertControllerElement;
 
   async showAlert() {
     const alert = await this.alertCtrl.create({

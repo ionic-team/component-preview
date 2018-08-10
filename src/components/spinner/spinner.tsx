@@ -1,6 +1,5 @@
 import { Component } from '@stencil/core';
 
-
 @Component({
   tag: 'page-spinner',
   styleUrl: 'spinner.css'
@@ -16,10 +15,10 @@ export class PageSpinner {
       </ion-header>,
 
       <ion-content fullscreen>
-        <div id='centerBlock'>
+        <div id="centerBlock">
           <ion-spinner></ion-spinner>
-          <ion-spinner color='primary'></ion-spinner>
-          <ion-spinner color='secondary'></ion-spinner>
+          <ion-spinner color="primary"></ion-spinner>
+          <ion-spinner color="secondary"></ion-spinner>
         </div>
       </ion-content>
     ];

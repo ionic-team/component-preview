@@ -1,6 +1,5 @@
 import { Component, State } from '@stencil/core';
 
-
 @Component({
   tag: 'page-infinite-scroll'
 })
@@ -9,7 +8,7 @@ export class PageInfiniteScroll {
 
   constructor() {
     this.items = new Array(15).fill(0).map(() => {
-      return Math.random()
+      return Math.random();
     });
   }
 
@@ -18,7 +17,7 @@ export class PageInfiniteScroll {
       console.log('hello world');
 
       const newItems = new Array(15).fill(0).map(() => {
-        return Math.random()
+        return Math.random();
       });
 
       this.items = this.items.concat(newItems);
@@ -37,7 +36,7 @@ export class PageInfiniteScroll {
       <ion-content fullscreen>
         <app-list items={this.items}></app-list>
 
-        <ion-infinite-scroll onIonInfinite={(event) => this.doInfinite(event)}>
+        <ion-infinite-scroll onIonInfinite={event => this.doInfinite(event)}>
           <ion-infinite-scroll-content
             loadingSpinner="bubbles"
             loadingText="Loading more data...">

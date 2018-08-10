@@ -1,14 +1,13 @@
 import { Component, State } from '@stencil/core';
 
-
 @Component({
   tag: 'page-select',
   styleUrl: 'select.css'
 })
 export class PageSelect {
 
-  @State() gaming: string = "n64";
-  @State() gender: string = "f";
+  @State() gaming = 'n64';
+  @State() gender = 'f';
   @State() os: string;
   @State() music: string;
   @State() month: string;

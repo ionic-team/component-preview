@@ -1,6 +1,5 @@
 import { Component, State } from '@stencil/core';
 
-
 @Component({
   tag: 'page-searchbar',
   styleUrl: 'searchbar.css'
@@ -63,10 +62,10 @@ export class PageSearchbar {
     const val = ev.target.value;
 
     // if the value is an empty string don't filter the items
-    if (val && val.trim() != '') {
-      this.items = this.items.filter((item) => {
+    if (val && val.trim() !== '') {
+      this.items = this.items.filter(item => {
         return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
-      })
+      });
     }
   }
 
@@ -79,17 +78,17 @@ export class PageSearchbar {
       </ion-header>,
 
       <ion-content fullscreen>
-        <ion-searchbar onIonInput={(event) => this.getItems(event)}></ion-searchbar>
+        <ion-searchbar onIonInput={event => this.getItems(event)}></ion-searchbar>
         <ion-list>
           {
-            this.items.map((item) => {
+            this.items.map(item => {
               return (
                 <ion-item>
                   <ion-label>
                     {item}
                   </ion-label>
                 </ion-item>
-              )
+              );
             })
           }
         </ion-list>
