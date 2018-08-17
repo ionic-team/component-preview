@@ -16,8 +16,8 @@ ion-toolbar {
 }
 
 :root {
-  --ion-safe-area-top: 20px;
-
-  /* remove once beta.3 is released */
-  --ion-statusbar-padding: 20px;
+  --ion-safe-area-top: 22px;
+}
+:root.ios {
+  --ion-safe-area-bottom: 20px;
 }

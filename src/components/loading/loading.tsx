@@ -11,10 +11,8 @@ export class PageLoading {
     const loading = await this.loadingCtrl.create({
       content: 'Please wait...',
       duration: 3000,
-      dismissOnPageChange: true
     });
-
-    loading.present();
+    await loading.present();
   }
 
   render() {

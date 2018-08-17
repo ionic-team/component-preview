@@ -22,91 +22,6 @@ export class ComponentPreview {
     }
   }
 
-  private renderPage() {
-    switch (this.active) {
-      case 'action-sheet':
-        return <page-action-sheet class="ion-page"></page-action-sheet>;
-
-      case 'alert':
-        return <page-alert class="ion-page"></page-alert>;
-
-      case 'badge':
-        return <page-badge class="ion-page"></page-badge>;
-
-      case 'button':
-        return <page-button class="ion-page"></page-button>;
-
-      case 'card':
-        return <page-card class="ion-page"></page-card>;
-
-      case 'checkbox':
-        return <page-checkbox class="ion-page"></page-checkbox>;
-
-      case 'datetime':
-        return <page-datetime class="ion-page"></page-datetime>;
-
-      case 'fab':
-        return <page-fab class="ion-page"></page-fab>;
-
-      case 'grid':
-        return <page-grid class="ion-page"></page-grid>;
-
-      case 'infinite-scroll':
-        return <page-infinite-scroll class="ion-page"></page-infinite-scroll>;
-
-      case 'input':
-        return <page-input class="ion-page"></page-input>;
-
-      case 'list':
-        return <page-list class="ion-page"></page-list>;
-
-      case 'loading':
-        return <page-loading class="ion-page"></page-loading>;
-
-      case 'menu':
-        return <page-menu class="ion-page"></page-menu>;
-
-      case 'modal':
-        return <page-modal class="ion-page"></page-modal>;
-
-      case 'nav':
-        return <page-nav class="ion-page"></page-nav >;
-
-      case 'popover':
-        return <page-popover class="ion-page"></page-popover>;
-
-      case 'range':
-        return <page-range class="ion-page"></page-range>;
-
-      case 'refresher':
-        return <page-refresher class="ion-page"></page-refresher>;
-
-      case 'searchbar':
-        return <page-searchbar class="ion-page"></page-searchbar>;
-
-      case 'select':
-        return <page-select class="ion-page"></page-select>;
-
-      case 'slides':
-        return <page-slides class="ion-page"></page-slides>;
-
-      case 'spinner':
-        return <page-spinner class="ion-page"></page-spinner>;
-
-      case 'tabs':
-        return <page-tabs class="ion-page"></page-tabs>;
-
-      case 'toast':
-        return <page-toast class="ion-page"></page-toast>;
-
-      case 'virtual-scroll':
-        return <page-virtual-scroll class="ion-page"></page-virtual-scroll>;
-
-      default:
-        return this.renderDefault();
-    }
-  }
-
   private renderDefault() {
     return (
       <ion-content padding>
@@ -122,10 +37,123 @@ export class ComponentPreview {
   }
 
   render() {
+    const demo = DEMOS[this.active];
+    const Page = demo ? demo.page : null;
+
     return (
       <ion-app>
-        { this.renderPage() }
+        { Page
+          ? <Page class="ion-page"></Page>
+          : this.renderDefault()
+        }
       </ion-app>
     );
   }
 }
+
+const DEMOS = {
+  'action-sheet': {
+    name: 'Action Sheet',
+    page: 'page-action-sheet'
+  },
+  'alert': {
+    name: 'Alert',
+    page: 'page-alert'
+  },
+  'badge': {
+    name: 'Badge',
+    page: 'page-badge'
+  },
+  'button': {
+    name: 'Button',
+    page: 'page-button'
+  },
+  'card': {
+    name: 'Card',
+    page: 'page-card'
+  },
+  'checkbox': {
+    name: 'Checkbox',
+    page: 'page-checkbox'
+  },
+  'datetime': {
+    name: 'Datetime',
+    page: 'page-datetime'
+  },
+  'fab': {
+    name: 'Fab',
+    page: 'page-fab'
+  },
+  'grid': {
+    name: 'Grid',
+    page: 'page-grid'
+  },
+  'infinite-scroll': {
+    name: 'Infinite Scroll',
+    page: 'page-infinite-scroll'
+  },
+  'input': {
+    name: 'Input',
+    page: 'page-input'
+  },
+  'list': {
+    name: 'List',
+    page: 'page-list'
+  },
+  'loading': {
+    name: 'Loading',
+    page: 'page-loading'
+  },
+  'menu': {
+    name: 'Menu',
+    page: 'page-menu'
+  },
+  'modal': {
+    name: 'Modal',
+    page: 'page-modal'
+  },
+  'nav': {
+    name: 'Navigation',
+    page: 'page-nav'
+  },
+  'popover': {
+    name: 'Popover',
+    page: 'page-popover'
+  },
+  'range': {
+    name: 'Range',
+    page: 'page-range'
+  },
+  'refresher': {
+    name: 'Refresher',
+    page: 'page-refresher'
+  },
+  'searchbar': {
+    name: 'Searchbar',
+    page: 'page-searchbar'
+  },
+  'select': {
+    name: 'Select',
+    page: 'page-select'
+  },
+  'slides': {
+    name: 'Slides',
+    page: 'page-slides'
+  },
+  'spinner': {
+    name: 'Spinner',
+    page: 'page-spinner'
+  },
+  'tabs': {
+    name: 'Tabs',
+    page: 'page-tabs'
+  },
+  'toast': {
+    name: 'Toast',
+    page: 'page-toast'
+  },
+  'virtual-scroll': {
+    name: 'Virtual Scroll',
+    page: 'page-virtual-scroll'
+  }
+};

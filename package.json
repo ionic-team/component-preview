@@ -3,17 +3,15 @@
   "version": "0.1.0",
   "scripts": {
     "build": "stencil build",
-    "dev": "stencil build --dev --www --watch --serve",
-    "start": "npm run dev",
-    "serve": "stencil-dev-server",
+    "start": "stencil build --dev --www --watch --serve",
     "lint": "tslint --project .",
     "lint.fix": "tslint --project . --fix"
   },
   "author": "Ionic Team",
   "license": "MIT",
   "dependencies": {
-    "@ionic/core": "4.0.0-beta.2",
-    "@stencil/core": "0.11.3"
+    "@ionic/core": "4.0.0-beta.3",
+    "@stencil/core": "0.11.4"
   },
   "devDependencies": {
     "tslint": "^5.11.0",

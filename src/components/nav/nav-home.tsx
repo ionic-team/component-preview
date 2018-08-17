@@ -81,7 +81,7 @@ export class PageNav {
           {
             this.techStacks.map(tech => {
               return (
-                <ion-item onClick={() => this.navToDetail(tech)}>
+                <ion-item button onClick={() => this.navToDetail(tech)}>
                   <ion-icon slot="start" name={`logo-${tech.icon}`} style={{ 'color': `${tech.color}` }}></ion-icon>
                   <ion-label>
                     <h3>{tech.title}</h3>
