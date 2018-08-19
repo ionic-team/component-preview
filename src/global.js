@@ -1,5 +1,5 @@
-import { setupConfig } from '@ionic/core';
+import { setupConfig } from "@ionic/core";
 
 setupConfig({
-  'statusbarPadding': false
+  "statusbarPadding": false,
 });

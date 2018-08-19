@@ -1,51 +1,30 @@
 import '@ionic/core';
-import { Component, Listen, State } from '@stencil/core';
+import { Component, Listen } from '@stencil/core';
 
 @Component({
   tag: 'component-preview'
 })
 export class ComponentPreview {
 
-  @State() active: string = null;
-
   @Listen('window:message')
   handleMessage({ data }: MessageEvent) {
     if (data.active) {
-      this.active = data.active;
       window.location.hash = data.active;
     }
   }
 
-  componentWillLoad() {
-    if (!this.active && window.location.hash) {
-      this.active = window.location.hash.slice(1);
-    }
-  }
-
-  private renderDefault() {
-    return (
-      <ion-content padding>
-        <ion-icon name="logo-ionic" color="primary" style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform : 'translate(-50%, -50%)',
-          fontSize: '6em'
-        }}></ion-icon>
-      </ion-content>
-    );
-  }
-
   render() {
-    const demo = DEMOS[this.active];
-    const Page = demo ? demo.page : null;
-
+    const pages = Object.entries(DEMOS);
     return (
       <ion-app>
-        { Page
-          ? <Page class="ion-page"></Page>
-          : this.renderDefault()
-        }
+        <ion-router useHash={true}>
+          <ion-route url="/" component="page-index" componentProps={{ pages }}/>
+          {pages.map(([key, { page }]) => (
+            <ion-route url={key} component={page} />
+          ))}
+        </ion-router>
+        <ion-router-outlet animated={false} no-router />
+
       </ion-app>
     );
   }

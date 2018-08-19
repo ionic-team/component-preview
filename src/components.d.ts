@@ -119,6 +119,10 @@ declare global {
 
     }
 
+    interface PageIndex {
+      'pages': any[];
+    }
+
     interface PopoverPage {
       'contentEl': HTMLElement;
     }
@@ -349,6 +353,14 @@ declare global {
     };
     
 
+    interface HTMLPageIndexElement extends StencilComponents.PageIndex, HTMLStencilElement {}
+
+    var HTMLPageIndexElement: {
+      prototype: HTMLPageIndexElement;
+      new (): HTMLPageIndexElement;
+    };
+    
+
     interface HTMLPopoverPageElement extends StencilComponents.PopoverPage, HTMLStencilElement {}
 
     var HTMLPopoverPageElement: {
@@ -463,6 +475,7 @@ declare global {
     'nav-details': JSXElements.NavDetailsAttributes;
     'nav-home': JSXElements.NavHomeAttributes;
     'page-nav': JSXElements.PageNavAttributes;
+    'page-index': JSXElements.PageIndexAttributes;
     'popover-page': JSXElements.PopoverPageAttributes;
     'page-popover': JSXElements.PagePopoverAttributes;
     'page-range': JSXElements.PageRangeAttributes;
@@ -571,6 +584,10 @@ declare global {
 
     }
 
+    export interface PageIndexAttributes extends HTMLAttributes {
+      'pages'?: any[];
+    }
+
     export interface PopoverPageAttributes extends HTMLAttributes {
       'contentEl'?: HTMLElement;
     }
@@ -640,6 +657,7 @@ declare global {
     'nav-details': HTMLNavDetailsElement
     'nav-home': HTMLNavHomeElement
     'page-nav': HTMLPageNavElement
+    'page-index': HTMLPageIndexElement
     'popover-page': HTMLPopoverPageElement
     'page-popover': HTMLPagePopoverElement
     'page-range': HTMLPageRangeElement
@@ -677,6 +695,7 @@ declare global {
     'nav-details': HTMLNavDetailsElement;
     'nav-home': HTMLNavHomeElement;
     'page-nav': HTMLPageNavElement;
+    'page-index': HTMLPageIndexElement;
     'popover-page': HTMLPopoverPageElement;
     'page-popover': HTMLPagePopoverElement;
     'page-range': HTMLPageRangeElement;
