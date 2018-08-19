@@ -7,7 +7,7 @@ export class PageInfiniteScroll {
   @State() items: any[];
 
   constructor() {
-    this.items = new Array(15).fill(0).map(() => {
+    this.items = new Array(30).fill(0).map(() => {
       return Math.random();
     });
   }
@@ -21,8 +21,8 @@ export class PageInfiniteScroll {
       });
 
       this.items = this.items.concat(newItems);
+      ev.target.complete();
     }, 1000);
-    ev.target.complete();
   }
 
   render() {
