@@ -8,7 +8,7 @@ export class PageToast {
 
   @Prop({ connect: 'ion-toast-controller ' }) toastCtrl: HTMLIonToastControllerElement;
 
-  async showToast(position: string) {
+  async showToast(position: 'top' | 'bottom' | 'middle') {
     const toast = await this.toastCtrl.create({
       message: 'Mmmm, buttered toast',
       duration: 2000,

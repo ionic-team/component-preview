@@ -9,7 +9,7 @@ export class PageLoading {
 
   async presentLoading() {
     const loading = await this.loadingCtrl.create({
-      content: 'Please wait...',
+      message: 'Please wait...',
       duration: 3000,
     });
     await loading.present();
