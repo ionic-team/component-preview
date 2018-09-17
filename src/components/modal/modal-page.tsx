@@ -4,12 +4,14 @@ import { Component, Element, Prop, State } from '@stencil/core';
   tag: 'modal-page'
 })
 export class ModalPage {
+  @Element()
+  el: HTMLElement;
 
-  @Element() el: HTMLElement;
+  @Prop()
+  char: string;
 
-  @Prop() char: string;
-
-  @State() character: any;
+  @State()
+  character: any;
 
   characters: any[];
 
@@ -49,7 +51,9 @@ export class ModalPage {
   }
 
   componentWillLoad() {
-    this.character = this.characters[this.char];
+    this.character = this.characters.find((item: any) => {
+      return item.name === this.char;
+    });
   }
 
   dismiss() {
@@ -73,27 +77,23 @@ export class ModalPage {
         <ion-list>
           <ion-item>
             <ion-avatar slot="start">
-              <img src={this.character.image}></img>
+              <img src={this.character.image} />
             </ion-avatar>
             <ion-label>
               <h2>{this.character.name}</h2>
               <p>{this.character.quote}</p>
             </ion-label>
           </ion-item>
-          {
-            this.character.items.map(item => {
-              return (
-                <ion-item>
-                  <ion-label>
-                    <h2>{item.title}</h2>
-                  </ion-label>
-                  <ion-note slot="end">
-                    {item.note}
-                  </ion-note>
-                </ion-item>
-              );
-            })
-          }
+          {this.character.items.map(item => {
+            return (
+              <ion-item>
+                <ion-label>
+                  <h2>{item.title}</h2>
+                </ion-label>
+                <ion-note slot="end">{item.note}</ion-note>
+              </ion-item>
+            );
+          })}
         </ion-list>
       </ion-content>
     ];
