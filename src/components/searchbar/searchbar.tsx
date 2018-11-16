@@ -75,10 +75,12 @@ export class PageSearchbar {
         <ion-toolbar>
           <ion-title>Searchbar</ion-title>
         </ion-toolbar>
+        <ion-toolbar>
+          <ion-searchbar onIonInput={event => this.getItems(event)}></ion-searchbar>
+        </ion-toolbar>
       </ion-header>,
 
       <ion-content fullscreen>
-        <ion-searchbar onIonInput={event => this.getItems(event)}></ion-searchbar>
         <ion-list>
           {
             this.items.map(item => {
