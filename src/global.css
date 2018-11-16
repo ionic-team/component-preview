@@ -16,8 +16,9 @@ ion-toolbar {
 }
 
 :root {
-  --ion-safe-area-top: 22px;
+  --ion-safe-area-top: 20px;
 }
+
 :root.ios {
-  --ion-safe-area-bottom: 20px;
+  --ion-safe-area-bottom: 32px;
 }
